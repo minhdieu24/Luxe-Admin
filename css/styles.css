@@ -118,6 +118,7 @@ header {
 #main-content {
   background-color: #d9d9d9;
   height: calc(100vh - 120px);
+  padding: 15px;
 }
 
 .home-row {
@@ -156,4 +157,76 @@ header {
   color: #1a162e;
   font-size: 4rem;
   font-weight: 700;
+}
+/* Danh sách sản phẩm - Table */
+.product-list {
+  background-color: #fff;
+  width: calc(100vw - 30px);
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.product-list td > img {
+  display: inline-block;
+  width: 55px;
+  background-color: #f6f6f6;
+}
+
+.product-list td > img:hover {
+  transform: scale(3);
+}
+
+.product-list td img:hover {
+  cursor: pointer;
+}
+
+.product-list,
+.product-list td,
+.product-list th {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.product-list td {
+  vertical-align: middle;
+  padding: 5px;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 175%;
+  max-width: 200px;
+}
+
+.product-list th {
+  padding: 10px;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.action {
+  margin-top: 8px;
+}
+
+/* List number */
+.list-number {
+  display: inline-block;
+  margin-left: 50%;
+  margin-top: 34px;
+  padding: 10px;
+  background: #fff;
+  transform: translate(-50%);
+}
+
+.list-number button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 3px;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.list-number button:hover {
+  color: #f86624;
 }
