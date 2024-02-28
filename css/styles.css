@@ -1,1 +1,159 @@
-/* Code CSS ở đây */
+* {
+  box-sizing: border-box;
+}
+
+/* Để sử dụng rem */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Quicksand, sans-serif;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: calc(100% - 100px);
+  margin-left: auto;
+  margin-right: auto;
+  /* không để margin: auto vì nếu vậy sẽ mặc định margin top+bottom = 0 > sau này sẽ ghi đè*/
+}
+
+header {
+  position: relative;
+  background-color: #171c28;
+  padding: 12.5px 0px;
+}
+
+/* ======== Navigation ======== */
+.logo-nav {
+  display: flex;
+  align-items: center;
+  margin-top: -7px;
+}
+
+.logo-nav .logo-title {
+  color: var(--primary-color);
+  margin-left: 14px;
+  color: #ffbe98;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.top-bar {
+  display: flex;
+  /* Căn giữa theo chiều dọc */
+  align-items: center;
+}
+
+.top-bar ul {
+  display: flex;
+  margin-left: 8.6rem;
+  list-style-type: none;
+}
+
+.top-bar .top-act {
+  display: flex;
+  margin-left: auto;
+  /* Trong flexbox, margin sẽ đẩy phần tử con ra khỏi hưởng được set*/
+  align-items: center;
+}
+
+.navbar ul a {
+  margin-left: 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 8px 10px;
+}
+
+.top-bar .top-act {
+  gap: 24px;
+}
+
+.top-bar .top-act-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 15px;
+  border: none;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navbar .top-act-title {
+  margin-left: 10px;
+  font-family: Quicksand;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.navbar ul a:hover {
+  text-decoration: underline;
+  color: #ffbe98;
+}
+/* Home Title */
+.home-title {
+  display: flex;
+  align-items: center;
+  padding: 9px 0;
+}
+
+.home-title .title {
+  margin-left: 10px;
+  color: #f86624;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Main Content Home*/
+#main-content {
+  background-color: #d9d9d9;
+  height: calc(100vh - 120px);
+}
+
+.home-row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.home-item {
+  display: flex;
+  align-items: center;
+  width: 365px;
+  height: 90px;
+  background-color: #f6f6f6;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.home-item img {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.home-item .item {
+  margin-left: 10px;
+}
+
+.item-title {
+  color: #1a162e;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.item-number {
+  color: #1a162e;
+  font-size: 4rem;
+  font-weight: 700;
+}
