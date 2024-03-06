@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Chỉnh biểu tượng web -->
+    <link href="./icon/Logo.svg" rel="shortcut icon" />
+    <title>Luxe - Admin</title>
+    <!-- GG Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Scripts -->
+    <script src="./js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="top-bar">
+          <!-- Logo -->
+          <a href="./" class="logo-nav">
+            <img src="./icon/Logo.svg" alt="Luxe" />
+            <h1 class="logo-title">Luxe</h1>
+          </a>
+          <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
+          <!-- Navigation -->
+          <nav class="navbar">
+            <ul>
+              <li><a href="#!">Trang chủ</a></li>
+              <li><a href="#!">Sản phẩm</a></li>
+              <li><a href="#!">Khuyến mãi</a></li>
+              <li><a href="#!">Đơn hàng</a></li>
+              <li><a href="#!">Khách hàng</a></li>
+              <li><a href="#!">Nhân viên</a></li>
+              <li><a href="#!">Thống kê</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action -->
+          <div class="top-act">
+            <button class="top-act-btn">
+              <img src="./icon/user.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Page Title -->
+    <section id="page-title">
+      <div class="container">
+        <div class="home-title">
+          <img src="./icon/settings.svg" alt="" />
+          <h1 class="title">Cập nhật thông tin sản phẩm</h1>
+        </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content-2">
+      <form action="" class="edit-product">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="MaSP" class="form-label">Mã sản phẩm</label>
+            <input type="text" id="MaSP" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="DanhMuc" class="form-label">Danh mục</label>
+            <!-- <input type="text" id="DanhMuc" class="form-input" /> -->
+            <select name="DanhMuc" id="DanhMuc" class="form-input">
+              <option value="1">Nhẫn cưới</option>
+              <option value="2">Dây chuyền</option>
+              <option value="3">Bông tai</option>
+            </select>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="TenSP" class="form-label">Tên sản phẩm</label>
+            <input type="text" id="TenSP" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="TrangThaiSP" class="form-label">Trạng thái</label>
+            <!-- <input type="text" id="TrangThaiSP" class="form-input" /> -->
+            <select name="TrangThaiSP" id="TrangThaiSP" class="form-input">
+              <option value="1">Đang hoạt động</option>
+              <option value="2">Ngừng hoạt động</option>
+            </select>
+          </div>
+        </div>
+        <!-- Row 3 & Row 4 -->
+        <div class="form-row">
+          <!-- Row 3 -->
+          <div class="form-group">
+            <label for="MoTaSP" class="form-label desc">Mô tả</label>
+            <input type="text" id="MoTaSP" class="form-input desc" />
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <label for="GiaGoc" class="form-label">Giá gốc</label>
+              <input type="text" id="GiaGoc" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="GiaBan" class="form-label">Giá bán</label>
+              <input type="text" id="GiaBan" class="form-input" />
+            </div>
+          </div>
+        </div>
+        <!-- Row 5 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="HinhAnhSP" class="form-label">Hình ảnh</label>
+            <input type="file" id="HinhAnhSP" class="file-pro" />
+          </div>
+          <div class="form-group">
+            <label for="SoLuong" class="form-label">Số lượng tồn</label>
+            <input type="text" id="SoLuong" class="form-input" />
+          </div>
+        </div>
+      </form>
+      <div class="edit-action">
+        <input type="submit" value="Cập nhật" class="edit-btn" />
+        <input type="submit" value="Huỷ" class="edit-btn" />
+      </div>
+    </section>
+  </body>
+</html>

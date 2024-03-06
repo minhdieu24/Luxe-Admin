@@ -117,7 +117,8 @@ header {
 /* Main Content Home*/
 #main-content {
   background-color: #d9d9d9;
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
+  max-width: 100vw;
   padding: 15px;
 }
 
@@ -159,9 +160,42 @@ header {
   font-weight: 700;
 }
 /* Danh sách sản phẩm - Table */
+.filter-sp {
+  display: flex;
+}
+
+.filter,
+.filter-input,
+.filter-btn {
+  padding: 5px;
+  font-size: 1.6rem;
+  border: 1px solid #a6a6a6;
+  height: 48px;
+  font-family: Quicksand;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.filter-input {
+  display: block;
+  width: 100%;
+}
+
+.filter,
+.filter-btn {
+  background-color: #ffbe98;
+}
+
+.filter-btn {
+  width: 80px;
+  height: 48px;
+  object-fit: none;
+}
+
 .product-list {
+  margin: 10px 0px;
   background-color: #fff;
-  width: calc(100vw - 30px);
+  width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
@@ -211,7 +245,7 @@ header {
 .list-number {
   display: inline-block;
   margin-left: 50%;
-  margin-top: 34px;
+  margin: 20px 0px 10px 50%;
   padding: 10px;
   background: #fff;
   transform: translate(-50%);
@@ -229,4 +263,75 @@ header {
 
 .list-number button:hover {
   color: #f86624;
+}
+
+/* Page Edit product */
+#main-content-2 {
+  background-color: #d9d9d9;
+  padding: 15px 15px 0;
+}
+
+.edit-product {
+  background-color: #fff;
+  padding: 20px 50px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 150px;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.form-label,
+.form-input {
+  display: block;
+}
+
+.form-label {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1a162e;
+  font-weight: 700;
+  line-height: 91.667%;
+}
+
+.form-input {
+  padding-left: 5px;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #051023;
+  border-radius: 5px;
+  font-family: Quicksand;
+  font-weight: 600;
+}
+
+.form-input.desc {
+  height: 163px;
+}
+
+.edit-action {
+  text-align: center;
+}
+
+.edit-btn {
+  margin: 18px 43px;
+  padding: 15px 35px;
+  width: 150px;
+  border: 0;
+  border-radius: 5px;
+  background: #ffbe98;
+  color: #000;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.file-pro {
+  width: 250px;
 }
