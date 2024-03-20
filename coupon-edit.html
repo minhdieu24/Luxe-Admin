@@ -54,9 +54,60 @@
     <section id="page-title">
       <div class="container">
         <div class="home-title">
-          <img src="./icon/home.svg" alt="" />
+          <img src="./icon/settings.svg" alt="" />
           <h1 class="title">Cập nhật danh sách coupon</h1>
         </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content-2">
+      <form action="" class="edit-coupon">
+        <!-- Row 1 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="MaCP" class="form-label">Mã coupon</label>
+            <input type="text" id="MaCP" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="GTGiam" class="form-label">Giá trị giảm</label>
+            <input type="text" id="GTGiam" class="form-input" />
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="TGBatDau" class="form-label">Thời gian bắt đầu</label>
+            <input type="text" id="TGBatDau" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="GTToiThieu" class="form-label">Giá trị đơn hàng tối thiểu</label>
+            <input type="text" id="GTToiThieu" class="form-input" />
+          </div>
+        </div>
+          <!-- Row 3 -->
+          <div class="form-row">
+          <div class="form-group">
+            <label for="TGKetThuc" class="form-label">Thời gian kết thúc</label>
+            <input type="text" id="TGKetThuc" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="LuotSD" class="form-label">Lượt sử dụng</label>
+            <input type="text" id="LuotSD" class="form-input" />          
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div class="form-group">
+          <label for="TrangThaiCP" class="form-label">Trạng thái</label>
+          <select name="TrangThaiSP" id="TrangThaiCP" class="form-input">
+            <option value="1">Đang áp dụng</option>
+            <option value="2">Chưa áp dụng</option>
+            <option value="3">Ngừng áp dụng</option>
+          </select>
+        </div>
+      </form>
+      <div class="edit-action">
+        <input type="submit" value="Cập nhật" class="edit-btn" />
+        <input type="submit" value="Huỷ" class="edit-btn" />
       </div>
     </section>
   </body>
