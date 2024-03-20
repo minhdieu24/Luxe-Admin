@@ -161,7 +161,7 @@
     font-size: 4rem;
     font-weight: 700;
   }
-  /* Danh sách sản phẩm - Table */
+  /* Danh sách coupon - Table */
   .filter-sp {
     display: flex;
   }
@@ -194,7 +194,7 @@
     object-fit: none;
   }
   
-  .product-list {
+  .coupon-list {
     margin: 10px 0px;
     background-color: #fff;
     width: 100%;
@@ -202,27 +202,27 @@
     text-align: center;
   }
   
-  .product-list td > img {
+  .coupon-list td > img {
     display: inline-block;
     width: 55px;
     background-color: #f6f6f6;
   }
   
-  .product-list td > img:hover {
+  .coupon-list td > img:hover {
     transform: scale(3);
   }
   
-  .product-list td img:hover {
+  .coupon-list td img:hover {
     cursor: pointer;
   }
   
-  .product-list,
-  .product-list td,
-  .product-list th {
+  .coupon-list,
+  .coupon-list td,
+  .coupon-list th {
     border-bottom: 1px solid #d9d9d9;
   }
   
-  .product-list td {
+  .coupon-list td {
     vertical-align: middle;
     padding: 5px;
     color: #000;
@@ -232,7 +232,7 @@
     max-width: 200px;
   }
   
-  .product-list th {
+  .coupon-list th {
     padding: 10px;
     color: #000;
     font-size: 1.8rem;

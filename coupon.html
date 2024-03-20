@@ -54,9 +54,128 @@
     <section id="page-title">
       <div class="container">
         <div class="home-title">
-          <img src="./icon/home.svg" alt="" />
+          <img src="./icon/diamond-2.svg" alt="" />
           <h1 class="title">Danh sách coupon</h1>
         </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content">
+      <!-- Filter -->
+      <div class="filter-sp">
+        <select name="filterSP" id="filterSP" class="filter">
+          <option value="0">--Chọn điều kiện lọc--</option>
+          <option value="1">Mã coupon</option>
+          <option value="2">Giá trị giảm</option>
+          <option value="2">Giá trị đơn tối thiểu</option>
+        </select>
+        <input type="text" id="data" class="filter-input" />
+        <input type="image" src="./icon/search.svg" alt="" class="filter-btn" />
+      </div>
+      <!-- Table -->
+      <table class="coupon-list">
+        <thead>
+          <tr>
+            <th>Mã coupon</th>
+            <th>Thời gian bắt đầu</th>
+            <th>Thời gian kết thúc</th>
+            <th>Trạng thái</th>
+            <th>Giá trị giảm</th>
+            <th>Giá trị đơn tối thiểu</th>
+            <th>Lượt sử dụng</th>
+            <th>Tác vụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- CP1 -->
+          <tr>
+            <td>CP001</td>
+            <td>12/02/2024</td>
+            <td>13/02/2024</td>
+            <td>Quá hạn</td>
+            <td>100.00</td>
+            <td>2.000.000</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- CP2 -->
+          <tr>
+            <td>CP001</td>
+            <td>12/02/2024</td>
+            <td>13/02/2024</td>
+            <td>Quá hạn</td>
+            <td>100.00</td>
+            <td>2.000.000</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- CP3 -->
+          <tr>
+            <td>CP001</td>
+            <td>12/02/2024</td>
+            <td>13/02/2024</td>
+            <td>Quá hạn</td>
+            <td>100.00</td>
+            <td>2.000.000</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- CP4 -->
+          <tr>
+            <td>CP001</td>
+            <td>12/02/2024</td>
+            <td>13/02/2024</td>
+            <td>Quá hạn</td>
+            <td>100.00</td>
+            <td>2.000.000</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- CP5 -->
+          <tr>
+            <td>CP001</td>
+            <td>12/02/2024</td>
+            <td>13/02/2024</td>
+            <td>Quá hạn</td>
+            <td>100.00</td>
+            <td>2.000.000</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- List -->
+      <div class="list-number">
+        <button>&lt &lt</button>
+        <button>1</button>
+        <button>2</button>
+        <button>...</button>
+        <button>&gt &gt</button>
       </div>
     </section>
   </body>
