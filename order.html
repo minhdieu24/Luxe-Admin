@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Scripts -->
     <script src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -59,8 +60,8 @@
         </div>
       </div>
     </section>
-    <!--Page profit-->
-    <section id="page-profit">
+    <!-- Page cost -->
+    <section id="page-cost">
       <div class="statistic">
           <!-- Tool- bar -->
           <div class="tool-bar">
@@ -69,17 +70,11 @@
                 <img src="./icon/revenue.svg" alt="" />
                 <a href="#!" class="text-revenue">Doanh thu</a>
               </div>
-              <div class="profit">
-                <img src="./icon/cost.svg" alt="" />
-                <a href="#!" class="text-revenue">Chi phí</a>
-              </div>
             </div>
-
             <div class="tool-bar__choose-cost">
-              <img src="./icon/profit.svg" alt="" />
-              <div class="text-revenue">Lợi nhuận</div>
+              <img src="./icon/cost.svg" alt="" />
+              <div class="text-revenue">Đơn hàng</div>
             </div>
-
             <div class="tool-bar__rest">
               <div class="cost">
                 <img src="./icon/product-sold.svg" alt="" />
@@ -93,6 +88,34 @@
           </div>
 
           <div class="revenue-statistics">
+            <div class="revenue">
+              <div class="selectdate">
+                <form class="date-form1">
+                  <label>Từ:</label>
+                  <label for="start-day">Ngày</label>
+                  <select id="start-day" class="custom-select" onclick="day()"></select>
+                  <label for="start-month">Tháng</label>
+                  <select id="start-month" class="custom-select" onclick="month()"></select>
+                  <label for="start-year">Năm</label>
+                  <select id="start-year" class="custom-select" onclick="year()"></select>
+                </form>
+                <form class="date-form2">
+                  <label>Đến:</label>
+                  <label for="end-day" class="endday">Ngày</label>
+                  <select id="end-day" class="custom-select" onclick="day()" ></select>
+                  <label for="end-month">Tháng</label>
+                  <select id="end-month" class="custom-select" onclick="month()"></select>
+                  <label for="end-year">Năm</label>
+                  <select id="end-year" class="custom-select" onclick="year()"></select>
+                </form>
+              </div>
+              <div class="total-revenue">
+                  <div class="total">10.000</div>
+                  <div class="total-text">Tổng đơn hàng</div>
+              </div>
+            </div>
+            <p class="chart" onclick="chart()">Biểu đồ</p>
+            <canvas id="myChart"></canvas>
           </div>
       </div>
     </section>
