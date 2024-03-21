@@ -161,7 +161,7 @@
     font-size: 4rem;
     font-weight: 700;
   }
-  .home-title .add-new-button1 {
+  .home-title .add-new-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +172,7 @@
     padding: 15px 35px;
     font: 600 18px/1.67 Quicksand, sans-serif;
     cursor: pointer;
-    margin-left: 1100px;
+    margin-left: 910px;
   }
   .home-title .add-new-button2 {
     display: flex;
@@ -363,153 +363,4 @@
     width: 250px;
   }
   
-  /* Danh sách chương trình khuyến mãi - Table */
-  .filter-km {
-    display: flex;
-  }
   
-  .filter,
-  .filter-input,
-  .filter-btn {
-    padding: 5px;
-    font-size: 1.6rem;
-    border: 1px solid #a6a6a6;
-    height: 48px;
-    font-family: Quicksand;
-    font-weight: 600;
-    font-size: 1.6rem;
-  }
-  
-  .filter-input {
-    display: block;
-    width: 100%;
-  }
-  
-  .filter,
-  .filter-btn {
-    background-color: #ffbe98;
-  }
-  
-  .filter-btn {
-    width: 80px;
-    height: 48px;
-    object-fit: none;
-  }
-  .promotion-list {
-    margin: 10px 0px;
-    background-color: #fff;
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-  }
-  
-  .promotion-list td > img {
-    display: inline-block;
-    width: 55px;
-    background-color: #f6f6f6;
-  }
-  
-  .promotion-list td > img:hover {
-    transform: scale(3);
-  }
-  
-  .promotion-list td img:hover {
-    cursor: pointer;
-  }
-  
-  .promotion-list,
-  .promotion-list td,
-  .promotion-list th {
-    border-bottom: 1px solid #d9d9d9;
-  }
-  
-  .promotion-list td {
-    vertical-align: middle;
-    padding: 5px;
-    color: #000;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 175%;
-    max-width: 200px;
-  }
-  
-  .promotion-list th {
-    padding: 10px;
-    color: #000;
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  .action {
-    margin-top: 8px;
-  }
-  /* Page Edit promotion */
-  #main-content-3 {
-    background-color: #d9d9d9;
-    padding: 15px 15px 0;
-  }
-  
-  .edit-promotion {
-    background-color: #fff;
-    padding: 20px 50px;
-  }
-  
-  .form-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 150px;
-  }
-  
-  .form-group:not(:last-child) {
-    margin-bottom: 36px;
-  }
-  
-  .form-label,
-  .form-input {
-    display: block;
-  }
-  
-  .form-label {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #1a162e;
-    font-weight: 700;
-    line-height: 91.667%;
-  }
-  
-  .form-input {
-    padding-left: 5px;
-    font-size: 1.6rem;
-    width: 100%;
-    height: 48px;
-    border: 1px solid #051023;
-    border-radius: 5px;
-    font-family: Quicksand;
-    font-weight: 600;
-  }
-  
-  .form-input.desc {
-    height: 163px;
-  }
-  
-  .edit-action {
-    text-align: center;
-  }
-  
-  .edit-btn {
-    margin: 18px 43px;
-    padding: 15px 35px;
-    width: 150px;
-    border: 0;
-    border-radius: 5px;
-    background: #ffbe98;
-    color: #000;
-    text-align: center;
-    font-family: Quicksand;
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  .file-pro {
-    width: 250px;
-  }
