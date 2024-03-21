@@ -50,41 +50,45 @@ function year(){
     }
   }
 }
-function chart(){
+document.addEventListener('DOMContentLoaded', function() {
+  chart();
+});
+      
+function chart() {
   // Tạo dữ liệu cho biểu đồ
-var data = {
-  labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
-  datasets: [{
+  var data = {
+    labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
+    datasets: [{
     label: "ABC",
     data: [1000, 1500, 1200, 1800, 2000, 1600],
     borderColor: "blue",
     fill: false
   }]
 };
-
-// Cấu hình biểu đồ
-var options = {
-  scales: {
-    x: {
-      display: true,
-      title: {
-        display: false,
-      }
-    },
-    y: {
-      display: true,
-      title: {
-        display: false,
-      }
-    }
+  
+  // Cấu hình biểu đồ
+  var options = {
+    scales: {
+              x:  {
+                    display: true,
+                    title: {
+                      display: false,
+                    }
+                  },
+              y:  {
+                    display: true,
+                    title: {
+                      display: false,
+                    }
+                  }
+            }
+          };
+  
+  // Vẽ biểu đồ
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: options
+    });
   }
-};
-
-// Vẽ biểu đồ
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: data,
-  options: options
-});
-}
