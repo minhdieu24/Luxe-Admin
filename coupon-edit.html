@@ -56,6 +56,7 @@
         <div class="home-title">
           <img src="./icon/settings.svg" alt="" />
           <h1 class="title">Cập nhật danh sách coupon</h1>
+          <button class="add-new-button2">Quay lại</button>
         </div>
       </div>
     </section>
@@ -76,8 +77,8 @@
         <!-- Row 2 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="TGBatDau" class="form-label">Thời gian bắt đầu</label>
-            <input type="text" id="TGBatDau" class="form-input" />
+            <label for="TenCP" class="form-label">Tên Coupon</label>
+            <input type="text" id="TenCP" class="form-input" />
           </div>
           <div class="form-group">
             <label for="GTToiThieu" class="form-label">Giá trị đơn hàng tối thiểu</label>
@@ -86,23 +87,29 @@
         </div>
           <!-- Row 3 -->
           <div class="form-row">
-          <div class="form-group">
-            <label for="TGKetThuc" class="form-label">Thời gian kết thúc</label>
-            <input type="text" id="TGKetThuc" class="form-input" />
-          </div>
+            <div class="form-group">
+              <label for="TGBatDau" class="form-label">Thời gian bắt đầu</label>
+              <input type="text" id="TGBatDau" class="form-input" />
+            </div>
           <div class="form-group">
             <label for="LuotSD" class="form-label">Lượt sử dụng</label>
             <input type="text" id="LuotSD" class="form-input" />          
           </div>
         </div>
         <!-- Row 4 -->
-        <div class="form-group">
-          <label for="TrangThaiCP" class="form-label">Trạng thái</label>
-          <select name="TrangThaiSP" id="TrangThaiCP" class="form-input">
-            <option value="1">Đang áp dụng</option>
-            <option value="2">Chưa áp dụng</option>
-            <option value="3">Ngừng áp dụng</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="TGKetThuc" class="form-label">Thời gian kết thúc</label>
+            <input type="text" id="TGKetThuc" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="TrangThaiCP" class="form-label">Trạng thái</label>
+            <select name="TrangThaiSP" id="TrangThaiCP" class="form-input">
+              <option value="1">Đang áp dụng</option>
+              <option value="2">Chưa áp dụng</option>
+              <option value="3">Ngừng áp dụng</option>
+            </select>
+          </div>
         </div>
       </form>
       <div class="edit-action">
