@@ -11,7 +11,6 @@
     font-size: 1.6rem;
     font-family: Quicksand, sans-serif;
   }
-  
   /* Common */
   a {
     text-decoration: none;
@@ -115,6 +114,7 @@
   }
   /*Page revenue*/
   .statistic{
+    display: flex;
     background-color: #f6f6f6;
   }
 
@@ -166,4 +166,24 @@
   .revenue-statistics{
 
   }
-
+  .date-form1, .date-form2{
+    margin-top: 3.81rem;
+    margin-left: 30px;
+  }
+  .date-form2{
+    margin-top: 2.8rem;
+  }
+  label{
+    margin-right: 10px;
+    margin-left: 15px;
+  }
+  .endday{
+    margin-left: 5px;
+  }
+  .custom-select {
+    width: 65px;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: Quicksand, sans-serif;
+    font-size: 15px;
+  }
