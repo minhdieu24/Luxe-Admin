@@ -113,4 +113,57 @@
     font-size: 3rem;
     font-weight: 700;
   }
-  
+  /*Page revenue*/
+  .statistic{
+    background-color: #f6f6f6;
+  }
+
+  .tool-bar{
+    background-color: #ffbe98;
+    display: flex;
+    max-width: 340px;
+    flex-direction: column;
+    color: #000;
+    font-weight: 500;
+    padding: 78px 0;
+  }
+  .tool-bar a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+  .tool-bar__choose, .tool-bar__choose-cost {
+    background-color: #f1deb4;
+    display: flex;
+    gap: 20px;
+    line-height: 122%;
+    padding: 15px 16px;
+    font-size: 18px;
+  }
+  .tool-bar__choose-cost{
+    margin-top: 29px;
+  }
+  .text-revenue {
+    color: black;
+    margin: auto 0;
+  }
+  .tool-bar__rest {
+    display: flex;
+    margin-top: 29px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    font-size: 15px;
+    line-height: 147%;
+    padding: 0 59px 0 20px;
+  }
+  .cost, .profit {
+    display: flex;
+    gap: 16px;
+  }
+  .profit {
+    margin-top: 43px;
+  }
+  .revenue-statistics{
+
+  }
+
