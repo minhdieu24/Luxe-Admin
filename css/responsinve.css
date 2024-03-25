@@ -1,0 +1,20 @@
+/* PC */
+@media screen and (max-width: 800px) {
+  .info-cate-add__inner--ten-input {
+    flex-wrap: wrap;
+  }
+  .info-cate-add__inner--iamge {
+    flex-wrap: wrap;
+  }
+  /* =========== pade edit dmsp ==== */
+  .input-DM-frame {
+    flex-wrap: wrap;
+  }
+  .category-input-note {
+    flex-wrap: wrap;
+  }
+  .form-input-DMSP-note {
+    height: 200px;
+    width: 300px;
+  }
+}
