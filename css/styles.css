@@ -358,6 +358,7 @@
     font-family: Quicksand;
     font-size: 1.8rem;
     font-weight: 600;
+    cursor: pointer;
   }
   
   .file-pro {
