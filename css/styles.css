@@ -175,8 +175,8 @@
     margin-top: 2.8rem;
   }
   label{
-    margin-right: 10px;
-    margin-left: 15px;
+    margin-right: 5px;
+    margin-left: 10px;
   }
   .endday{
     margin-left: 5px;
@@ -191,11 +191,11 @@
   .total-revenue{
     border-radius: 15px;
     background-color: #522a28;
-    align-self: end;
     display: flex;
     flex-direction: column;
-    margin: 3.81rem 50px 0 130px;
-    padding: 30px 30px 30px;
+    margin: 3.81rem 50px 0 120px;
+    padding: 10px 10px 10px;
+    justify-content: center;
   }
   .total, .total-text {
     align-self: center;
@@ -225,7 +225,7 @@
   }
   .date-form__review{
     margin-top: 5.6rem;
-    margin-left: 20px;
+    margin-left: 15px;
   }
   .product-list {
     margin: 20px 0px 50px 30px;
