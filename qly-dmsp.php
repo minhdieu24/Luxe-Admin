@@ -74,7 +74,8 @@
 
               <div class="info-cate-add__inner--ten-input">
                 <label for="TenDMSP" class="form-DMSP-label">Tên danh mục <span style="color:red">*</span></label>
-                <input type="text" id="TenDMSP" name="TenDMSP" class="form-DMSP-input" required />
+                <input type="text" id="TenDMSP" name="TenDMSP" placeholder="Điền tên danh mục" class="form-DMSP-input"
+                  required />
               </div>
               <div class="info-cate-add__inner--iamge">
                 <label for="HinhAnhDMSP" class="form-DMSP-label">Hình ảnh <span style="color:red">*</span></label>
