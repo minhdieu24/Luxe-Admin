@@ -191,16 +191,9 @@ header {
   padding: 15px;
   background-color: #ffb487eb;
   border-radius: 5px;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 16px !important;
+  font-weight: 600 !important;
 }
-/* .them-moi {
-  font-size: 16px;
-  font-weight: 500;
-  color: black;
-  text-align: center;
-  min-width: 80px;
-} */
 .button-them-moi:hover {
   background-color: #ffac7a;
 }
