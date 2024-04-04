@@ -155,13 +155,10 @@ header {
   flex-wrap: wrap;
 }
 .info-cate-add__inner--ten-input {
-  width: 350px;
+  width: 400px;
   display: flex;
   gap: 10px;
   align-items: center;
-}
-.MaDMSP--format {
-  color: red;
 }
 .info-cate-add__inner--iamge {
   display: flex;
@@ -186,6 +183,7 @@ header {
   border-radius: 5px;
   font-family: Quicksand;
   font-weight: 600;
+  width: 235px;
 }
 .button-them-moi {
   cursor: pointer;
@@ -193,14 +191,16 @@ header {
   padding: 15px;
   background-color: #ffb487eb;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
 }
-.them-moi {
+/* .them-moi {
   font-size: 16px;
   font-weight: 500;
   color: black;
   text-align: center;
   min-width: 80px;
-}
+} */
 .button-them-moi:hover {
   background-color: #ffac7a;
 }
