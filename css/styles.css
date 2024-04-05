@@ -106,6 +106,7 @@ header {
 .home-title-DMSP {
   display: flex;
   align-items: center;
+  /* justify-content: space-between; */
   padding: 10px 0;
 }
 
@@ -418,7 +419,7 @@ header {
 }
 /* ================ thông tin cập nhật ============*/
 .cap-nhat-button {
-  width: 161px;
+  width: 100px;
   border-radius: 10px;
   background-color: #ef9059;
   justify-content: center;
@@ -427,9 +428,9 @@ header {
   text-align: center;
   color: #fff;
   cursor: pointer;
-}
-.cap-nhat--text {
   font-weight: 700;
+  border: none;
+  font-size: 15px;
 }
 
 .cp-nht-child {

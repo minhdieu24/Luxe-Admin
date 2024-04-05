@@ -113,19 +113,19 @@
         <tbody>
           <!-- SP1 -->
           <tr>
-            <td>ProCat1</td>
+            <td>1</td>
             <td>NHẪN</td>
             <td><img src="./img/item-1.png" alt="" /></td>
             <td>
               <div class="action">
-                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/edit.svg" alt="" id="edit_button" />
                 <img src="./icon/delete.svg" alt="" />
               </div>
             </td>
           </tr>
           <!-- SP2 -->
           <tr>
-            <td>ProCat2</td>
+            <td>2</td>
             <td>VÒNG TAY</td>
             <td><img src="./img/item-1.png" alt="" /></td>
             <td>
@@ -137,7 +137,7 @@
           </tr>
           <!-- SP3 -->
           <tr>
-            <td>ProCat3</td>
+            <td>3</td>
             <td>DÂY CHUYỀN</td>
             <td><img src="./img/item-1.png" alt="" /></td>
             <td>
@@ -149,7 +149,7 @@
           </tr>
           <!-- SP4 -->
           <tr>
-            <td>ProCat4</td>
+            <td>4</td>
             <td>BÔNG TAI</td>
             <td><img src="./img/item-1.png" alt="" /></td>
             <td>
@@ -193,6 +193,14 @@
       </div>
     </div>
   </section>
+  <script>
+    var edit_button = document.getElementById("edit_button");
+    if (edit_button) {
+      edit_button.addEventListener("click", function (e) {
+        window.location.href = "edit-dmsp.php"; //nhấn nút back quay lại qly loại sp
+      });
+    }
+  </script>
 </body>
 
 </html>
