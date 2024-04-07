@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Để sử dụng rem */
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    font-family: Quicksand, sans-serif;
+  }
+  /* Common */
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: calc(100% - 100px);
+    margin-left: auto;
+    margin-right: auto;
+    /* không để margin: auto vì nếu vậy sẽ mặc định margin top+bottom = 0 > sau này sẽ ghi đè*/
+  }
+  
+  header {
+    position: relative;
+    background-color: #171c28;
+    padding: 12.5px 0px;
+  }
+  
+  /* ======== Navigation ======== */
+  .logo-nav {
+    display: flex;
+    align-items: center;
+    margin-top: -7px;
+  }
+  
+  .logo-nav .logo-title {
+    color: var(--primary-color);
+    margin-left: 14px;
+    color: #ffbe98;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .top-bar {
+    display: flex;
+    /* Căn giữa theo chiều dọc */
+    align-items: center;
+  }
+  
+  .top-bar ul {
+    display: flex;
+    margin-left: 8.6rem;
+    list-style-type: none;
+  }
+  
+  .top-bar .top-act {
+    display: flex;
+    margin-left: auto;
+    /* Trong flexbox, margin sẽ đẩy phần tử con ra khỏi hưởng được set*/
+    align-items: center;
+  }
+  
+  .navbar ul a {
+    margin-left: 15px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 8px 10px;
+  }
+  
+  .top-bar .top-act {
+    gap: 24px;
+  }
+  
+  .top-bar .top-act-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    padding: 15px;
+    border: none;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .navbar .top-act-title {
+    margin-left: 10px;
+    font-family: Quicksand;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .navbar ul a:hover {
+    text-decoration: underline;
+    color: #ffbe98;
+  }
+  /* Home Title */
+  .home-title {
+    display: flex;
+    align-items: center;
+    padding: 9px 0;
+  }
+  
+  .home-title .title {
+    margin-left: 10px;
+    color: #f86624;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  /*Page revenue*/
+  .statistic{
+    display: flex;
+    background-color: #f6f6f6;
+  }
+
+  .tool-bar{
+    background-color: #ffbe98;
+    display: flex;
+    max-width: 340px;
+    flex-direction: column;
+    color: #000;
+    font-weight: 500;
+    padding: 78px 0;
+  }
+  .tool-bar a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+  .tool-bar__choose, .tool-bar__choose-cost {
+    background-color: #f1deb4;
+    display: flex;
+    gap: 20px;
+    line-height: 122%;
+    padding: 15px 16px;
+    font-size: 18px;
+  }
+  .tool-bar__choose-cost{
+    margin-top: 29px;
+  }
+  .text-revenue {
+    color: black;
+    margin: auto 0;
+    margin-right: 60px;
+  }
+  .tool-bar__rest {
+    display: flex;
+    margin-top: 29px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    font-size: 15px;
+    line-height: 147%;
+    padding: 0 59px 0 20px;
+  }
+  .cost, .profit {
+    display: flex;
+    gap: 16px;
+  }
+  .profit {
+    margin-top: 43px;
+  }
+  .revenue{
+    display: flex;
+  }
+  .date-form1, .date-form2{
+    margin-top: 5.6rem;
+    margin-left: 30px;
+  }
+  .date-form2{
+    margin-top: 2.8rem;
+  }
+  label{
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  .endday{
+    margin-left: 5px;
+  }
+  .custom-select {
+    width: 65px;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: Quicksand, sans-serif;
+    font-size: 15px;
+  }
+  .total-revenue{
+    border-radius: 15px;
+    background-color: #522a28;
+    display: flex;
+    flex-direction: column;
+    margin: 3.81rem 50px 0 120px;
+    padding: 10px 10px 10px;
+    justify-content: center;
+  }
+  .total, .total-text {
+    align-self: center;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .total-text {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .chart{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #522a28;
+    margin-bottom: 25px;
+  }
+  #myChart{
+    margin-left: 30px;
+  }
+  .selectdate-review{
+    display: flex;
+  }
+  .date-form__review{
+    margin-top: 5.6rem;
+    margin-left: 15px;
+  }
+  .product-list {
+    margin: 20px 0px 50px 30px;
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .product-list td > img {
+    display: inline-block;
+    width: 55px;
+    background-color: #f6f6f6;
+  }
+  
+  .product-list td > img:hover {
+    transform: scale(3);
+  }
+  
+  .product-list td img:hover {
+    cursor: pointer;
+  }
+  
+  .product-list,
+  .product-list td,
+  .product-list th {
+    border-bottom: 1px solid #d9d9d9;
+  }
+  
+  .product-list td {
+    vertical-align: middle;
+    padding: 5px;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 175%;
+    max-width: 200px;
+  }
+  
+  .product-list th {
+    padding: 10px;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
