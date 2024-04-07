@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +15,9 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <!-- Scripts -->
-    <script src="./js/scripts.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -56,70 +57,67 @@
       <div class="container">
         <div class="home-title">
           <img src="./icon/settings.svg" alt="" />
-          <h1 class="title">Cập nhật thông tin sản phẩm</h1>
+          <h1 class="title">Cập nhật danh sách nhân viên</h1>
+          <a class="add-new-button2" href="nhanvien.html" id="Return" target="_blank">Quay lại</a> 
         </div>
       </div>
     </section>
     <!-- Main content -->
     <section id="main-content-2">
-      <form action="" class="edit-product">
+      <form action="" class="edit-nhanvien">
+        <!-- Row 1 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="MaSP" class="form-label">Mã sản phẩm</label>
-            <input type="text" id="MaSP" class="form-input" />
+            <label for="MaNV" class="form-label">Mã nhân viên</label>
+            <input type="text" id="MaNV" class="form-input" />
+          </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="SDT" class="form-label">Số điện thoại</label>
+            <input type="text" id="SDT" class="form-input" />
           </div>
           <div class="form-group">
-            <label for="DanhMuc" class="form-label">Danh mục</label>
-            <!-- <input type="text" id="DanhMuc" class="form-input" /> -->
-            <select name="DanhMuc" id="DanhMuc" class="form-input">
-              <option value="1">Nhẫn cưới</option>
-              <option value="2">Dây chuyền</option>
-              <option value="3">Bông tai</option>
-            </select>
+            <label for="DCcutru" class="form-label">Địa chỉ cư trú</label>
+            <input type="text" id="DCcutru" class="form-input" />
           </div>
         </div>
         <!-- Row 2 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="TenSP" class="form-label">Tên sản phẩm</label>
-            <input type="text" id="TenSP" class="form-input" />
+            <label for="Hoten" class="form-label">Họ tên nhân viên</label>
+            <input type="text" id="Hoten" class="form-input" />
           </div>
           <div class="form-group">
-            <label for="TrangThaiSP" class="form-label">Trạng thái</label>
-            <!-- <input type="text" id="TrangThaiSP" class="form-input" /> -->
-            <select name="TrangThaiSP" id="TrangThaiSP" class="form-input">
-              <option value="1">Đang hoạt động</option>
-              <option value="2">Ngừng hoạt động</option>
+            <label for="DCcutru" class="form-label">Địa chỉ cư trú</label>
+            <input type="text" id="DCcutru" class="form-input" />
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="Gioitinh" id="Gioitinh" class="form-input">
+              <option value="1">Nam</option>
+              <option value="2">Nữ</option>
             </select>
           </div>
-        </div>
-        <!-- Row 3 & Row 4 -->
-        <div class="form-row">
-          <!-- Row 3 -->
           <div class="form-group">
-            <label for="MoTaSP" class="form-label desc">Mô tả</label>
-            <input type="text" id="MoTaSP" class="form-input desc" />
-          </div>
-          <div class="form-group">
-            <div class="form-group">
-              <label for="GiaGoc" class="form-label">Giá gốc</label>
-              <input type="text" id="GiaGoc" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label for="GiaBan" class="form-label">Giá bán</label>
-              <input type="text" id="GiaBan" class="form-input" />
-            </div>
+            <label for="NgayTG" class="form-label">Ngày tham gia</label>
+            <input type="text" id="NgayTG" class="form-input" />          
           </div>
         </div>
-        <!-- Row 5 -->
+        <!-- Row 4 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="HinhAnhSP" class="form-label">Hình ảnh</label>
-            <input type="file" id="HinhAnhSP" class="file-pro" />
+            <label for="TrangThaiNV" class="form-label">Trạng thái</label>
+            <select name="TrangThaiNV" id="TrangThaiNV" class="form-input">
+              <option value="1">Đang hoạt động</option>
+              <option value="2">Tạm nghỉ</option>
+              <option value="3">Đã nghỉ</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label for="SoLuong" class="form-label">Số lượng tồn</label>
-            <input type="text" id="SoLuong" class="form-input" />
+          <div class="form-group" style="display: none;">
+            <label for="Email" class="form-label">Email nhân viên</label>
+            <input type="email" id="Email" class="form-input" />
           </div>
         </div>
       </form>
@@ -130,3 +128,14 @@
     </section>
   </body>
 </html>
+<script>
+  $(function() {
+    // Khởi tạo Datepicker cho input có id là "NgayTG"
+    $("#NgayTG").datepicker();
+  });
+  document.getElementById('HoTen').addEventListener('input', function() {
+    var hoTen = this.value;
+    var email = hoTen.toLowerCase().replace(/\s+/g, '.') + '@luxe.com';
+    document.getElementById('Email').value = email;
+  });
+</script>
