@@ -307,7 +307,7 @@ header {
 .form-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 150px;
+  gap: 50px;
 }
 
 .form-group:not(:last-child) {
@@ -363,5 +363,10 @@ header {
 
 .file-pro {
   width: 250px;
+}
+.form-input[disabled] {
+  background-color: #f0f0f0; /* Change background color to gray */
+  color: #666; /* Change text color to dark gray */
+  cursor: not-allowed; /* Change cursor to not-allowed */
 }
 

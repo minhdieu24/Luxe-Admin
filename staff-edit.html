@@ -18,6 +18,18 @@
     <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script>
+      $(function() {
+        // Khởi tạo Datepicker cho input có id là "NgayTG"
+        $("#NgayTG").datepicker();
+      });
+      function generateEmail() {
+            var hoten = document.getElementById('Hoten').value;
+            var email = hoten.toLowerCase().replace(/\s+/g, '.') + '@luxe.com';
+            document.getElementById('Email').value = email;
+            document.getElementById('displayEmail').textContent = email; // Hiển thị địa chỉ email
+      }
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -71,21 +83,16 @@
             <label for="MaNV" class="form-label">Mã nhân viên</label>
             <input type="text" id="MaNV" class="form-input" />
           </div>
-        <div class="form-row">
           <div class="form-group">
             <label for="SDT" class="form-label">Số điện thoại</label>
             <input type="text" id="SDT" class="form-input" />
-          </div>
-          <div class="form-group">
-            <label for="DCcutru" class="form-label">Địa chỉ cư trú</label>
-            <input type="text" id="DCcutru" class="form-input" />
           </div>
         </div>
         <!-- Row 2 -->
         <div class="form-row">
           <div class="form-group">
             <label for="Hoten" class="form-label">Họ tên nhân viên</label>
-            <input type="text" id="Hoten" class="form-input" />
+            <input type="text" id="Hoten" class="form-input" oninput="generateEmail()"/>
           </div>
           <div class="form-group">
             <label for="DCcutru" class="form-label">Địa chỉ cư trú</label>
@@ -95,7 +102,8 @@
         <!-- Row 3 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="Gioitinh" id="Gioitinh" class="form-input">
+            <label for="Gioitinh" class="form-label">Giới tính</label>
+            <select name="Gioitinh" id="Gioitinh" class="form-input">
               <option value="1">Nam</option>
               <option value="2">Nữ</option>
             </select>
@@ -115,9 +123,10 @@
               <option value="3">Đã nghỉ</option>
             </select>
           </div>
-          <div class="form-group" style="display: none;">
+          <div class="form-group">
             <label for="Email" class="form-label">Email nhân viên</label>
-            <input type="email" id="Email" class="form-input" />
+            <input type="email" id="Email" class="form-input" disabled/>
+            <p id="displayEmail"></p> <!-- Thêm phần tử HTML để hiển thị địa chỉ email -->
           </div>
         </div>
       </form>
@@ -128,14 +137,3 @@
     </section>
   </body>
 </html>
-<script>
-  $(function() {
-    // Khởi tạo Datepicker cho input có id là "NgayTG"
-    $("#NgayTG").datepicker();
-  });
-  document.getElementById('HoTen').addEventListener('input', function() {
-    var hoTen = this.value;
-    var email = hoTen.toLowerCase().replace(/\s+/g, '.') + '@luxe.com';
-    document.getElementById('Email').value = email;
-  });
-</script>
