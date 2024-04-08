@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Chỉnh biểu tượng web -->
+    <link href="./icon/Logo.svg" rel="shortcut icon" />
+    <title>Luxe - Admin</title>
+    <!-- GG Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Scripts -->
+    <script src="./js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
+    <!-- Page Title -->
+    <section id="page-title">
+      <div class="index_main">
+        <div class="home-title">
+          <img src="./icon/index-home.svg" alt="" />
+          <h1 class="title">Thông tin chung</h1>
+        </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content">
+      <div class="index_main">
+        <!-- Row 1 -->
+        <div class="home-row">
+          <!-- Item 1 -->
+          <div class="home-item">
+            <img src="./icon/index-collection.svg" alt="" />
+            <div class="item">
+              <h2 class="item-title">Danh mục sản phẩm</h2>
+              <span class="item-number"> 4 </span>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="home-item">
+            <img src="./icon/index-diamond.svg" alt="" />
+            <div class="item">
+              <h2 class="item-title">Sản phẩm</h2>
+              <span class="item-number"> 20 </span>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="home-item">
+            <img src="./icon/index-shopping-bag.svg" alt="" />
+            <div class="item">
+              <h2 class="item-title">Đơn hàng</h2>
+              <span class="item-number"> 20 </span>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="home-row">
+          <!-- Item 4 -->
+          <div class="home-item">
+            <img src="./icon/index-customer.svg" alt="" />
+            <div class="item">
+              <h2 class="item-title">Khách hàng</h2>
+              <span class="item-number"> 20 </span>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="home-item">
+            <img src="./icon/index-staff.svg" alt="" />
+            <div class="item">
+              <h2 class="item-title">Nhân viên</h2>
+              <span class="item-number"> 10 </span>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="home-item">
+            <img src="./icon/index-discount.svg" alt="" />
+            <div class="item">
+              <h2 class="item-title">Khuyến mãi</h2>
+              <span class="item-number"> 20 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
