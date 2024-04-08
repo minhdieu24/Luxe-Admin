@@ -13,7 +13,7 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <!-- Styles + JS cho phần variants -->
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- Scripts -->
-    <script src="./js/scripts.js"></script>
+    <script src="./js/index.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -41,7 +41,7 @@
     </section>
     <!-- Main content -->
     <section id="main-content-2">
-      <form action="" class="edit-product">
+      <form action="./sanpham.html" class="edit-product">
         <!-- Row 1 -->
         <div class="form-row">
           <div class="form-group">
@@ -200,13 +200,10 @@
           });
         </script>
         <div class="edit-action">
-          <input type="submit" value="Thêm" class="edit-btn" />
-          <input
-            type="button"
-            value="Huỷ"
-            class="edit-btn"
-            onclick="window.location.href = 'sanpham.php?opt=view_sp'"
-          />
+          <input type="submit" value="Cập nhật" class="edit-btn" />
+          <a href="./sanpham.html"
+            ><input type="button" value="Huỷ" class="edit-btn"
+          /></a>
         </div>
       </form>
     </section>
