@@ -296,7 +296,7 @@
   /* Page Edit coupon */
   #main-content-2 {
     background-color: #d9d9d9;
-    padding: 80px 30px 0;
+    padding: 30px 30px 0;
   }
   
   .edit-coupon {
@@ -311,7 +311,7 @@
   }
   
   .form-group:not(:last-child) {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
   
   .form-label,
@@ -341,7 +341,10 @@
   .form-input.desc {
     height: 163px;
   }
-  
+  .form-icon{
+    margin-left: auto;
+    cursor: pointer;
+  }
   .edit-action {
     text-align: center;
   }

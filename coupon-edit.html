@@ -13,9 +13,9 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/khuyenmai.css" />
     <!-- Scripts -->
-    <script src="./js/script.js"></script>
+    <script src="./js/khuyenmai.js"></script>
   </head>
   <body>
     <!-- Header -->
@@ -56,13 +56,17 @@
         <div class="home-title">
           <img src="./icon/settings.svg" alt="" />
           <h1 class="title">Cập nhật danh sách coupon</h1>
-          <a class="add-new-button2" href="coupon.html" id="Return" target="_blank">Quay lại</a> 
+          <a class="add-new-button2">Làm mới</a> 
         </div>
       </div>
     </section>
     <!-- Main content -->
     <section id="main-content-2">
       <form action="" class="edit-coupon">
+        <div class="form-group">
+          <label for="MaCP" class="form-label">Mã coupon</label>
+          <input type="text" id="MaCP" class="form-input" />
+        </div>
         <!-- Row 1 -->
         <div class="form-row">
           <div class="form-group">
@@ -94,10 +98,12 @@
             <div class="form-group">
               <label for="TGBatDau" class="form-label">Thời gian bắt đầu</label>
               <input type="text" id="TGBatDau" class="form-input" />
+              <img src="./icon/khuyenmai-calendar.svg" alt="" class="form-icon"/>
             </div>
             <div class="form-group">
               <label for="TGKetThuc" class="form-label">Thời gian kết thúc</label>
               <input type="text" id="TGKetThuc" class="form-input" />
+              <img src="./icon/khuyenmai-calendar.svg" alt="" class="form-icon"/>
             </div>
         </div>
       </form>
