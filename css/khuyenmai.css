@@ -336,13 +336,17 @@
     border-radius: 5px;
     font-family: Quicksand;
     font-weight: 600;
+    position: relative;
   }
   
   .form-input.desc {
     height: 163px;
   }
   .form-icon{
-    align-items: end;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     cursor: pointer;
   }
   .edit-action {
