@@ -308,10 +308,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 150px;
-  }
-  
-  .form-group:not(:last-child) {
     margin-bottom: 28px;
+  }
+  .form-row1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 150px;
+    margin-bottom: 28px;
+  }
+  .form-group:not(:last-child) {
+    margin-bottom: 0px;
   }
   
   .form-label,
