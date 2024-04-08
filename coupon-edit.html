@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/khuyenmai.css" />
     <!-- Scripts -->
     <script src="./js/khuyenmai.js"></script>
+    <!--Thư viên flatpickr để chọn ngày giờ-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   </head>
   <body>
     <!-- Header -->
@@ -56,7 +58,7 @@
         <div class="home-title">
           <img src="./icon/settings.svg" alt="" />
           <h1 class="title">Cập nhật danh sách coupon</h1>
-          <a class="add-new-button2">Làm mới</a> 
+          <button type="button" onclick="resetForm()" class="add-new-button2">Làm mới</button>
         </div>
       </div>
     </section>
@@ -97,18 +99,21 @@
           <div class="form-row">
             <div class="form-group">
                 <label for="TGBatDau" class="form-label">Thời gian bắt đầu</label>
-                <div class="form-input">
-                    <input type="datetime" id="TGBatDauInput" class="form-input"/>
-                    <img src="./icon/khuyenmai-calendar.svg" alt="" class="form-icon" id="TGBatDauIcon"/>
-                </div>
+                <input type="date" name="date" id="TGBatDauInput" class="form-input"/>
             </div>
             <div class="form-group">
                 <label for="TGKetThuc" class="form-label">Thời gian kết thúc</label>
-                <div class="form-input">
-                    <input type="datetime" id="TGKetThucInput" class="form-input"/>
-                    <img src="./icon/khuyenmai-calendar.svg" alt="" class="form-icon" id="TGKetThucIcon"/>
-                </div>
+                <input type="date" name="date" id="TGKetThucInput" class="form-input"/>
+ 
             </div>
+            <!-- Chức năng chọn ngày giờ-->
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js">
+              flatpickr('#date', {
+                enableTime: true,
+                dateFormat: "Y-m-d",
+                locale: "vi"
+              });
+            </script>
         </div>        
       </form>
       <div class="edit-action">
