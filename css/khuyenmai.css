@@ -342,7 +342,7 @@
     height: 163px;
   }
   .form-icon{
-    margin-left: auto;
+    align-items: end;
     cursor: pointer;
   }
   .edit-action {
