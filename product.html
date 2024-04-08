@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vn">
   <head>
     <!-- Chỉnh biểu tượng web -->
     <link href="./icon/Logo.svg" rel="shortcut icon" />
@@ -19,43 +19,19 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="top-bar">
-          <!-- Logo -->
-          <a href="./" class="logo-nav">
-            <img src="./icon/Logo.svg" alt="Luxe" />
-            <h1 class="logo-title">Luxe</h1>
-          </a>
-          <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
-          <!-- Navigation -->
-          <nav class="navbar">
-            <ul>
-              <li><a href="#!">Trang chủ</a></li>
-              <li><a href="#!">Sản phẩm</a></li>
-              <li><a href="#!">Khuyến mãi</a></li>
-              <li><a href="#!">Đơn hàng</a></li>
-              <li><a href="#!">Khách hàng</a></li>
-              <li><a href="#!">Nhân viên</a></li>
-              <li><a href="#!">Thống kê</a></li>
-            </ul>
-          </nav>
-
-          <!-- Action -->
-          <div class="top-act">
-            <button class="top-act-btn">
-              <img src="./icon/user.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
     <!-- Page Title -->
     <section id="page-title">
-      <div class="container">
+      <div class="index_main sanpham">
         <div class="home-title">
-          <img src="./icon/diamond-2.svg" alt="" />
+          <img src="./icon/sanpham-diamond.svg" alt="" />
           <h1 class="title">Danh sách sản phẩm</h1>
+        </div>
+        <div class="edit-btn-add">
+          <a href="themsanpham.php">Thêm sản phẩm</a>
         </div>
       </div>
     </section>
@@ -63,10 +39,9 @@
     <section id="main-content">
       <!-- Filter -->
       <div class="filter-sp">
-        <select name="filterSP" id="filterSP" class="filter">
-          <option value="0">--Chọn điều kiện lọc--</option>
-          <option value="1">Mã Sản phẩm</option>
-          <option value="2">Tên Sản phẩm</option>
+        <select name="dieukien" id="filterSP" class="filter">
+          <option value="0">Mã Sản phẩm</option>
+          <option value="1">Tên Sản phẩm</option>
         </select>
         <input type="text" id="data" class="filter-input" />
         <input type="image" src="./icon/search.svg" alt="" class="filter-btn" />
@@ -88,12 +63,12 @@
         <tbody>
           <!-- SP1 -->
           <tr>
-            <td>SP001</td>
-            <td>Nhẫn ngọc trai Luxe</td>
-            <td><img src="./img/item-1.png" alt="" /></td>
-            <td>Đang hiển thị</td>
-            <td>1.100.000 VNĐ</td>
-            <td>2.100.000 VNĐ</td>
+            <td>1</td>
+            <td>Nhẫn NDINO 3H0</td>
+            <td><img src="./img/3H0-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>2.000.000 VNĐ</td>
+            <td>1.400.000 VNĐ</td>
             <td>20</td>
             <td>
               <div class="action">
@@ -104,12 +79,12 @@
           </tr>
           <!-- SP2 -->
           <tr>
-            <td>SP001</td>
-            <td>Nhẫn ngọc trai Luxe</td>
-            <td><img src="./img/item-1.png" alt="" /></td>
-            <td>Đang hiển thị</td>
-            <td>1.100.000 VNĐ</td>
+            <td>2</td>
+            <td>Nhẫn NDINO 8D1</td>
+            <td><img src="./img/8D1-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
             <td>2.100.000 VNĐ</td>
+            <td>1.470.000 VNĐ</td>
             <td>20</td>
             <td>
               <div class="action">
@@ -120,12 +95,12 @@
           </tr>
           <!-- SP3 -->
           <tr>
-            <td>SP001</td>
-            <td>Nhẫn ngọc trai Luxe</td>
-            <td><img src="./img/item-1.png" alt="" /></td>
-            <td>Đang hiển thị</td>
-            <td>1.100.000 VNĐ</td>
-            <td>2.100.000 VNĐ</td>
+            <td>3</td>
+            <td>Nhẫn NDINO 5N3</td>
+            <td><img src="./img/5N3-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>3.450.000 VNĐ</td>
+            <td>2.415.000 VNĐ</td>
             <td>20</td>
             <td>
               <div class="action">
@@ -136,12 +111,12 @@
           </tr>
           <!-- SP4 -->
           <tr>
-            <td>SP001</td>
-            <td>Nhẫn ngọc trai Luxe</td>
-            <td><img src="./img/item-1.png" alt="" /></td>
-            <td>Đang hiển thị</td>
-            <td>1.100.000 VNĐ</td>
-            <td>2.100.000 VNĐ</td>
+            <td>4</td>
+            <td>Nhẫn NDINO 2N5</td>
+            <td><img src="./img/2N5-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>4.500.000 VNĐ</td>
+            <td>3.150.000 VNĐ</td>
             <td>20</td>
             <td>
               <div class="action">
@@ -152,11 +127,11 @@
           </tr>
           <!-- SP5 -->
           <tr>
-            <td>SP001</td>
-            <td>Nhẫn ngọc trai Luxe</td>
-            <td><img src="./img/item-1.png" alt="" /></td>
-            <td>Đang hiển thị</td>
-            <td>1.100.000 VNĐ</td>
+            <td>5</td>
+            <td>Dây chuyền LUXEMAND 01</td>
+            <td><img src="./img/AND 01-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>2.190.000 VNĐ</td>
             <td>2.100.000 VNĐ</td>
             <td>20</td>
             <td>
@@ -168,12 +143,12 @@
           </tr>
           <!-- SP6 -->
           <tr>
-            <td>SP001</td>
-            <td>Nhẫn ngọc trai Luxe</td>
-            <td><img src="./img/item-1.png" alt="" /></td>
-            <td>Đang hiển thị</td>
-            <td>1.100.000 VNĐ</td>
-            <td>2.100.000 VNĐ</td>
+            <td>6</td>
+            <td>Dây chuyền LUXEMAND 02</td>
+            <td><img src="./img/AND 02-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>7.899.000 VNĐ</td>
+            <td>5.529.300 VNĐ</td>
             <td>20</td>
             <td>
               <div class="action">

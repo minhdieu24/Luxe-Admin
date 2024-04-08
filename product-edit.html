@@ -14,45 +14,25 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Styles + JS cho phần variants -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!-- Scripts -->
     <script src="./js/scripts.js"></script>
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="top-bar">
-          <!-- Logo -->
-          <a href="./" class="logo-nav">
-            <img src="./icon/Logo.svg" alt="Luxe" />
-            <h1 class="logo-title">Luxe</h1>
-          </a>
-          <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
-          <!-- Navigation -->
-          <nav class="navbar">
-            <ul>
-              <li><a href="#!">Trang chủ</a></li>
-              <li><a href="#!">Sản phẩm</a></li>
-              <li><a href="#!">Khuyến mãi</a></li>
-              <li><a href="#!">Đơn hàng</a></li>
-              <li><a href="#!">Khách hàng</a></li>
-              <li><a href="#!">Nhân viên</a></li>
-              <li><a href="#!">Thống kê</a></li>
-            </ul>
-          </nav>
-
-          <!-- Action -->
-          <div class="top-act">
-            <button class="top-act-btn">
-              <img src="./icon/user.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
     <!-- Page Title -->
     <section id="page-title">
-      <div class="container">
+      <div class="index_main">
         <div class="home-title">
           <img src="./icon/settings.svg" alt="" />
           <h1 class="title">Cập nhật thông tin sản phẩm</h1>
@@ -62,70 +42,173 @@
     <!-- Main content -->
     <section id="main-content-2">
       <form action="" class="edit-product">
+        <!-- Row 1 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="MaSP" class="form-label">Mã sản phẩm</label>
-            <input type="text" id="MaSP" class="form-input" />
+            <label for="tensp" class="form-label">Tên sản phẩm</label>
+            <input type="text" id="tensp" name="tensp" class="form-input" />
           </div>
           <div class="form-group">
             <label for="DanhMuc" class="form-label">Danh mục</label>
-            <!-- <input type="text" id="DanhMuc" class="form-input" /> -->
             <select name="DanhMuc" id="DanhMuc" class="form-input">
-              <option value="1">Nhẫn cưới</option>
-              <option value="2">Dây chuyền</option>
-              <option value="3">Bông tai</option>
+              <option value="1">Nhẫn</option>
+              <option value="2">Vòng tay</option>
+              <option value="3">Dây chuyền</option>
+              <option value="4">Bông tai</option>
             </select>
           </div>
         </div>
         <!-- Row 2 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="TenSP" class="form-label">Tên sản phẩm</label>
-            <input type="text" id="TenSP" class="form-input" />
+            <label for="chatlieu" class="form-label">Chất liệu</label>
+            <input
+              type="text"
+              id="chatlieu"
+              name="chatlieu"
+              class="form-input"
+            />
           </div>
           <div class="form-group">
-            <label for="TrangThaiSP" class="form-label">Trạng thái</label>
-            <!-- <input type="text" id="TrangThaiSP" class="form-input" /> -->
-            <select name="TrangThaiSP" id="TrangThaiSP" class="form-input">
-              <option value="1">Đang hoạt động</option>
-              <option value="2">Ngừng hoạt động</option>
+            <label for="trangthai" class="form-label">Trạng thái</label>
+            <select name="trangthai" id="trangthai" class="form-input">
+              <option value="1">Hiển thị</option>
+              <option value="0">Không hiển thị</option>
             </select>
           </div>
         </div>
-        <!-- Row 3 & Row 4 -->
+        <!-- Row 3 -->
         <div class="form-row">
-          <!-- Row 3 -->
           <div class="form-group">
-            <label for="MoTaSP" class="form-label desc">Mô tả</label>
-            <input type="text" id="MoTaSP" class="form-input desc" />
+            <label for="khoiluong" class="form-label">Khối lượng (g)</label>
+            <input
+              type="number"
+              id="khoiluong"
+              name="khoiluong"
+              class="form-input"
+            />
           </div>
           <div class="form-group">
-            <div class="form-group">
-              <label for="GiaGoc" class="form-label">Giá gốc</label>
-              <input type="text" id="GiaGoc" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label for="GiaBan" class="form-label">Giá bán</label>
-              <input type="text" id="GiaBan" class="form-input" />
-            </div>
+            <label for="giagoc" class="form-label">Giá gốc</label>
+            <input type="number" id="giagoc" name="giagoc" class="form-input" />
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="loaida" class="form-label">Loại đá</label>
+            <input type="text" id="loaida" name="loaida" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="giagiam" class="form-label">Giá giảm</label>
+            <input
+              type="number"
+              id="giagiam"
+              name="giagiam"
+              class="form-input"
+            />
           </div>
         </div>
         <!-- Row 5 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="HinhAnhSP" class="form-label">Hình ảnh</label>
-            <input type="file" id="HinhAnhSP" class="file-pro" />
+            <label for="kichthuocda" class="form-label"
+              >Kích thước đá (mm)</label
+            >
+            <input
+              type="number"
+              id="kichthuocda"
+              name="kichthuocda"
+              class="form-input"
+            />
           </div>
           <div class="form-group">
-            <label for="SoLuong" class="form-label">Số lượng tồn</label>
-            <input type="text" id="SoLuong" class="form-input" />
+            <label for="hinhanhsp" class="form-label">Hình ảnh</label>
+            <input
+              type="file"
+              id="hinhanhsp"
+              name="hinhanh1"
+              class="file-pro"
+              title="Hình ảnh 1"
+            />
+            <input
+              type="file"
+              name="hinhanh2"
+              class="file-pro"
+              title="Hình ảnh 2"
+            />
+            <input
+              type="file"
+              name="hinhanh3"
+              class="file-pro"
+              title="Hình ảnh 3"
+            />
           </div>
         </div>
+        <!-- Row 6 -->
+        <div class="form-group-variant">
+          <label for="HinhAnhSP" class="form-label">Biến thể</label>
+          <table class="table table-bordered" id="dynamic_field">
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  name="tenbienthe[]"
+                  placeholder="Nhập tên biến thể"
+                  class="form-control name_list"
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  name="soluong[]"
+                  placeholder="Nhập số lượng"
+                  class="form-control name_list"
+                />
+              </td>
+              <td>
+                <button
+                  type="button"
+                  name="add"
+                  id="add"
+                  class="btn btn-success"
+                >
+                  +
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <script>
+          $(document).ready(function () {
+            var i = 1;
+            $("#add").click(function () {
+              i++;
+              $("#dynamic_field").append(
+                '<tr id="row' +
+                  i +
+                  '"><td><input type="text" name="tenbienthe[]" placeholder="Nhập tên biến thể" class="form-control name_list" /></td><td><input type="number" name="soluong[]" placeholder="Nhập số lượng" class="form-control name_list"/></td><td><button type="button" name="remove" id="' +
+                  i +
+                  '" class="btn btn-danger btn_remove">x</button></td></tr>'
+              );
+            });
+
+            $(document).on("click", ".btn_remove", function () {
+              var button_id = $(this).attr("id");
+              $("#row" + button_id + "").remove();
+            });
+          });
+        </script>
+        <div class="edit-action">
+          <input type="submit" value="Thêm" class="edit-btn" />
+          <input
+            type="button"
+            value="Huỷ"
+            class="edit-btn"
+            onclick="window.location.href = 'sanpham.php?opt=view_sp'"
+          />
+        </div>
       </form>
-      <div class="edit-action">
-        <input type="submit" value="Cập nhật" class="edit-btn" />
-        <input type="submit" value="Huỷ" class="edit-btn" />
-      </div>
     </section>
   </body>
 </html>

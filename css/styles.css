@@ -17,14 +17,14 @@ a {
   text-decoration: none;
 }
 
-.container {
+.index_main {
   max-width: calc(100% - 100px);
   margin-left: auto;
   margin-right: auto;
   /* không để margin: auto vì nếu vậy sẽ mặc định margin top+bottom = 0 > sau này sẽ ghi đè*/
 }
 
-header {
+#header {
   position: relative;
   background-color: #171c28;
   padding: 12.5px 0px;
@@ -51,7 +51,7 @@ header {
   align-items: center;
 }
 
-.top-bar ul {
+.top-bar > ul {
   display: flex;
   margin-left: 8.6rem;
   list-style-type: none;
@@ -62,14 +62,6 @@ header {
   margin-left: auto;
   /* Trong flexbox, margin sẽ đẩy phần tử con ra khỏi hưởng được set*/
   align-items: center;
-}
-
-.navbar ul a {
-  margin-left: 15px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #ffffff;
-  padding: 8px 10px;
 }
 
 .top-bar .top-act {
@@ -89,17 +81,6 @@ header {
   cursor: pointer;
 }
 
-.navbar .top-act-title {
-  margin-left: 10px;
-  font-family: Quicksand;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.navbar ul a:hover {
-  text-decoration: underline;
-  color: #ffbe98;
-}
 /* Home Title */
 .home-title {
   display: flex;
@@ -112,6 +93,57 @@ header {
   color: #f86624;
   font-size: 3rem;
   font-weight: 700;
+}
+
+/* Test sub menu */
+.menu {
+  margin-left: 20px;
+}
+
+.menu > li {
+  position: relative;
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.menu > li:hover .sub-menu {
+  display: block;
+}
+
+.menu a {
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 8px 10px 25px;
+}
+
+.menu a:hover {
+  color: #ffbe98;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  width: 210px;
+  background: #171c28;
+  display: none;
+}
+
+.sub-menu li:hover {
+  background: #292e39;
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 8px;
+  color: #fff;
+}
+
+.sub-menu a:hover {
+  color: #ffbe98;
 }
 
 /* Main Content Home*/
@@ -160,6 +192,27 @@ header {
   font-weight: 700;
 }
 /* Danh sách sản phẩm - Table */
+.index_main.sanpham {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn-add {
+  padding: 15px 35px;
+  border: 0;
+  border-radius: 5px;
+  background: #ffbe98;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.edit-btn-add a {
+  color: #000;
+}
+
 .filter-sp {
   display: flex;
 }
@@ -334,4 +387,16 @@ header {
 
 .file-pro {
   width: 250px;
+}
+
+.file-pro {
+  font-size: 18px;
+  height: 30px;
+}
+
+.form-group-variant {
+  display: inline-block;
+  width: calc(50% - 75px);
+  margin-bottom: 0;
+  vertical-align: middle;
 }

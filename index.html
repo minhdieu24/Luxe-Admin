@@ -19,54 +19,27 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="top-bar">
-          <!-- Logo -->
-          <a href="./" class="logo-nav">
-            <img src="./icon/Logo.svg" alt="Luxe" />
-            <h1 class="logo-title">Luxe</h1>
-          </a>
-          <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
-          <!-- Navigation -->
-          <nav class="navbar">
-            <ul>
-              <li><a href="#!">Trang chủ</a></li>
-              <li><a href="#!">Sản phẩm</a></li>
-              <li><a href="#!">Khuyến mãi</a></li>
-              <li><a href="#!">Đơn hàng</a></li>
-              <li><a href="#!">Khách hàng</a></li>
-              <li><a href="#!">Nhân viên</a></li>
-              <li><a href="#!">Thống kê</a></li>
-            </ul>
-          </nav>
-
-          <!-- Action -->
-          <div class="top-act">
-            <button class="top-act-btn">
-              <img src="./icon/user.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
     <!-- Page Title -->
     <section id="page-title">
-      <div class="container">
+      <div class="index_main">
         <div class="home-title">
-          <img src="./icon/home.svg" alt="" />
+          <img src="./icon/index-home.svg" alt="" />
           <h1 class="title">Thông tin chung</h1>
         </div>
       </div>
     </section>
     <!-- Main content -->
     <section id="main-content">
-      <div class="container">
+      <div class="index_main">
         <!-- Row 1 -->
         <div class="home-row">
           <!-- Item 1 -->
           <div class="home-item">
-            <img src="./icon/collection.svg" alt="" />
+            <img src="./icon/index-collection.svg" alt="" />
             <div class="item">
               <h2 class="item-title">Danh mục sản phẩm</h2>
               <span class="item-number"> 4 </span>
@@ -74,7 +47,7 @@
           </div>
           <!-- Item 2 -->
           <div class="home-item">
-            <img src="./icon/diamond.svg" alt="" />
+            <img src="./icon/index-diamond.svg" alt="" />
             <div class="item">
               <h2 class="item-title">Sản phẩm</h2>
               <span class="item-number"> 20 </span>
@@ -82,7 +55,7 @@
           </div>
           <!-- Item 3 -->
           <div class="home-item">
-            <img src="./icon/shopping-bag.svg" alt="" />
+            <img src="./icon/index-shopping-bag.svg" alt="" />
             <div class="item">
               <h2 class="item-title">Đơn hàng</h2>
               <span class="item-number"> 20 </span>
@@ -93,7 +66,7 @@
         <div class="home-row">
           <!-- Item 4 -->
           <div class="home-item">
-            <img src="./icon/customer.svg" alt="" />
+            <img src="./icon/index-customer.svg" alt="" />
             <div class="item">
               <h2 class="item-title">Khách hàng</h2>
               <span class="item-number"> 20 </span>
@@ -101,7 +74,7 @@
           </div>
           <!-- Item 5 -->
           <div class="home-item">
-            <img src="./icon/staff.svg" alt="" />
+            <img src="./icon/index-staff.svg" alt="" />
             <div class="item">
               <h2 class="item-title">Nhân viên</h2>
               <span class="item-number"> 10 </span>
@@ -109,7 +82,7 @@
           </div>
           <!-- Item 6 -->
           <div class="home-item">
-            <img src="./icon/discount.svg" alt="" />
+            <img src="./icon/index-discount.svg" alt="" />
             <div class="item">
               <h2 class="item-title">Khuyến mãi</h2>
               <span class="item-number"> 20 </span>
