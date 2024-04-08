@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vn">
+  <head>
+    <!-- Chỉnh biểu tượng web -->
+    <link href="./icon/Logo.svg" rel="shortcut icon" />
+    <title>Luxe - Admin</title>
+    <!-- GG Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Scripts -->
+    <script src="./js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
+    <!-- Page Title -->
+    <section id="page-title">
+      <div class="index_main sanpham">
+        <div class="home-title">
+          <img src="./icon/sanpham-diamond.svg" alt="" />
+          <h1 class="title">Danh sách sản phẩm</h1>
+        </div>
+        <div class="edit-btn-add">
+          <a href="themsanpham.php">Thêm sản phẩm</a>
+        </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content">
+      <!-- Filter -->
+      <div class="filter-sp">
+        <select name="dieukien" id="filterSP" class="filter">
+          <option value="0">Mã Sản phẩm</option>
+          <option value="1">Tên Sản phẩm</option>
+        </select>
+        <input type="text" id="data" class="filter-input" />
+        <input type="image" src="./icon/search.svg" alt="" class="filter-btn" />
+      </div>
+      <!-- Table -->
+      <table class="product-list">
+        <thead>
+          <tr>
+            <th>Mã sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Trạng thái</th>
+            <th>Giá gốc</th>
+            <th>Giá bán</th>
+            <th>Số lượng tồn</th>
+            <th>Tác vụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- SP1 -->
+          <tr>
+            <td>1</td>
+            <td>Nhẫn NDINO 3H0</td>
+            <td><img src="./img/3H0-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>2.000.000 VNĐ</td>
+            <td>1.400.000 VNĐ</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- SP2 -->
+          <tr>
+            <td>2</td>
+            <td>Nhẫn NDINO 8D1</td>
+            <td><img src="./img/8D1-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>2.100.000 VNĐ</td>
+            <td>1.470.000 VNĐ</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- SP3 -->
+          <tr>
+            <td>3</td>
+            <td>Nhẫn NDINO 5N3</td>
+            <td><img src="./img/5N3-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>3.450.000 VNĐ</td>
+            <td>2.415.000 VNĐ</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- SP4 -->
+          <tr>
+            <td>4</td>
+            <td>Nhẫn NDINO 2N5</td>
+            <td><img src="./img/2N5-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>4.500.000 VNĐ</td>
+            <td>3.150.000 VNĐ</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- SP5 -->
+          <tr>
+            <td>5</td>
+            <td>Dây chuyền LUXEMAND 01</td>
+            <td><img src="./img/AND 01-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>2.190.000 VNĐ</td>
+            <td>2.100.000 VNĐ</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- SP6 -->
+          <tr>
+            <td>6</td>
+            <td>Dây chuyền LUXEMAND 02</td>
+            <td><img src="./img/AND 02-1.webp" alt="" /></td>
+            <td>Hiển thị</td>
+            <td>7.899.000 VNĐ</td>
+            <td>5.529.300 VNĐ</td>
+            <td>20</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- List -->
+      <div class="list-number">
+        <button>&lt &lt</button>
+        <button>1</button>
+        <button>2</button>
+        <button>...</button>
+        <button>&gt &gt</button>
+      </div>
+    </section>
+  </body>
+</html>
