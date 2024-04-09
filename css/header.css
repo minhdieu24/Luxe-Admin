@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Để sử dụng rem */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Quicksand, sans-serif;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+}
+
+.index_main {
+  max-width: calc(100% - 100px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header {
+  position: relative;
+  background-color: #171c28;
+  padding: 12.5px 0px;
+}
+
+/* ======== Navigation ======== */
+.logo-nav {
+  display: flex;
+  align-items: center;
+  margin-top: -7px;
+}
+
+.logo-nav .logo-title {
+  color: var(--primary-color);
+  margin-left: 14px;
+  color: #ffbe98;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.top-bar {
+  display: flex;
+  /* Căn giữa theo chiều dọc */
+  align-items: center;
+}
+
+.top-bar > ul {
+  display: flex;
+  margin-left: 8.6rem;
+  list-style-type: none;
+}
+
+.top-bar .top-act {
+  display: flex;
+  margin-left: auto;
+  /* Trong flexbox, margin sẽ đẩy phần tử con ra khỏi hưởng được set*/
+  align-items: center;
+}
+
+.top-bar .top-act {
+  gap: 24px;
+}
+
+.top-bar .top-act-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  padding: 15px;
+  border: none;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Test sub menu */
+.menu {
+  margin-left: 20px;
+}
+
+.menu > li {
+  position: relative;
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.menu > li:hover .sub-menu {
+  display: block;
+}
+
+.menu a {
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 8px 10px 25px;
+}
+
+.menu a:hover {
+  color: #ffbe98;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  width: 210px;
+  background: #171c28;
+  display: none;
+}
+
+.sub-menu li:hover {
+  background: #292e39;
+}
+
+.sub-menu a {
+  display: inline-block;
+  padding: 8px;
+  color: #fff;
+}
+
+.sub-menu a:hover {
+  color: #ffbe98;
+}
