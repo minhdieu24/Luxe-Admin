@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Chỉnh biểu tượng web -->
+    <link href="./icon/Logo.svg" rel="shortcut icon" />
+    <title>Luxe - Admin</title>
+    <!-- GG Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/nhanvien.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
+    <!-- Page Title -->
+    <section id="page-title">
+      <div class="container">
+        <div class="home-title">
+          <img src="./icon/nhanvien-diamond-2.svg" alt="" />
+          <h1 class="title">Danh sách nhân viên</h1>
+          <button class="add-new-buttonds">Thêm mới</button>
+        </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content">
+      <!-- Filter -->
+      <div class="filter-nv">
+        <select name="filterNV" id="filterNV" class="filter">
+          <option value="0">--Chọn điều kiện lọc--</option>
+          <option value="1">Mã Nhân viên</option>
+          <option value="2">Tên Nhân viên</option>
+        </select>
+        <input type="text" id="data" class="filter-input" />
+        <input type="image" src="./icon/nhanvien-search.svg" alt="" class="filter-btn" />
+      </div>
+      <!-- Table -->
+      <table class="nhanvien-list">
+        <thead>
+          <tr>
+            <th>Mã NV</th>
+            <th>Họ tên</th>
+            <th>Giới tính</th>
+            <th>Trạng thái</th>
+            <th>SĐT</th>
+            <th>Địa chỉ cư trú</th>
+            <th>Ngày tham gia</th>
+            <th>Tác vụ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- NV1 -->
+          <tr>
+            <td>1</td>
+            <td>Nguyễn Văn Bình</td>
+            <td>Nam</td>
+            <td>Đang hoạt động</td>
+            <td>0123456789</td>
+            <td>Quận 5, TPHCM</td>
+            <td>15/01/2023</td>
+            <td>
+              <div class="action">
+                <img src="./icon/nhanvien-edit.svg" alt="" />
+                <img src="./icon/nhanvien-delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- NV2 -->
+          <tr>
+            <td>2</td>
+            <td>Trần Thị Mỹ</td>
+            <td>Nữ</td>
+            <td>Đang hoạt động</td>
+            <td>0987654321</td>
+            <td>Quận 5, TPHCM</td>
+            <td>20/02/2023</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- NV3 -->
+          <tr>
+            <td>3</td>
+            <td>Lê Minh Trường</td>
+            <td>Nam</td>
+            <td>Đang hoạt động</td>
+            <td>0369876543</td>
+            <td>Quận 3, TPHCM</td>
+            <td>10/03/2023</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- NV4 -->
+          <tr>
+            <td>4</td>
+            <td>Phạm Diễm Thi</td>
+            <td>Nữ</td>
+            <td>Đang hoạt động</td>
+            <td>0932468102</td>
+            <td>Quận Gò Vấp, TPHCM</td>
+            <td>05/04/2023</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- NV5 -->
+          <tr>
+            <td>5</td>
+            <td>Nguyễn Ngọc Bích</td>
+            <td>Nữ</td>
+            <td>Đang hoạt động</td>
+            <td>0975312468</td>
+            <td>Quận 7, TPHCM</td>
+            <td>12/05/2023</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+          <!-- NV6 -->
+          <tr>
+            <td>6</td>
+            <td>Đặng Trần Tấn Minh</td>
+            <td>Nam</td>
+            <td>Đang hoạt động</td>
+            <td>0852369741</td>
+            <td>Quận 7, TPHCM</td>
+            <td>20/06/2023</td>
+            <td>
+              <div class="action">
+                <img src="./icon/edit.svg" alt="" />
+                <img src="./icon/delete.svg" alt="" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- button>
+        <button>&gt &List -->
+      <div class="list-number">
+        <button>&lt &lt</button>
+        <button>1</button>
+        <button>2</button>
+        <button>...</gt</button>
+        <button>&gt &gt</button>
+      </div>
+    </section>
+  </body>
+</html>
