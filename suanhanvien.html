@@ -62,8 +62,8 @@
         <!-- Row 1 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="MaNV" class="form-label">Mã nhân viên</label>
-            <input type="text" id="MaNV" class="form-input" />
+            <label for="Hoten" class="form-label">Họ tên nhân viên</label>
+            <input type="text" id="Hoten" class="form-input" oninput="generateEmail()"/>
           </div>
           <div class="form-group">
             <label for="SDT" class="form-label">Số điện thoại</label>
@@ -73,8 +73,11 @@
         <!-- Row 2 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="Hoten" class="form-label">Họ tên nhân viên</label>
-            <input type="text" id="Hoten" class="form-input" oninput="generateEmail()"/>
+            <label for="Gioitinh" class="form-label">Giới tính</label>
+            <select name="Gioitinh" id="Gioitinh" class="form-input">
+              <option value="1">Nam</option>
+              <option value="2">Nữ</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="DCcutru" class="form-label">Địa chỉ cư trú</label>
@@ -84,33 +87,16 @@
         <!-- Row 3 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="Gioitinh" class="form-label">Giới tính</label>
-            <select name="Gioitinh" id="Gioitinh" class="form-input">
-              <option value="1">Nam</option>
-              <option value="2">Nữ</option>
-            </select>
+            <label for="Email" class="form-label">Email</label>
+            <input type="email" id="Email" class="form-input" disabled/>
+            <p id="displayEmail"></p> <!-- Thêm phần tử HTML để hiển thị địa chỉ email -->
           </div>
           <div class="form-group">
             <label for="NgayTG" class="form-label">Ngày tham gia</label>
             <input type="text" id="NgayTG" class="form-input" />          
           </div>
         </div>
-        <!-- Row 4 -->
-        <div class="form-row">
-          <div class="form-group">
-            <label for="TrangThaiNV" class="form-label">Trạng thái</label>
-            <select name="TrangThaiNV" id="TrangThaiNV" class="form-input">
-              <option value="1">Đang hoạt động</option>
-              <option value="2">Tạm nghỉ</option>
-              <option value="3">Đã nghỉ</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="Email" class="form-label">Email nhân viên</label>
-            <input type="email" id="Email" class="form-input" disabled/>
-            <p id="displayEmail"></p> <!-- Thêm phần tử HTML để hiển thị địa chỉ email -->
-          </div>
-        </div>
+        
       </form>
       <div class="edit-action">
         <input type="submit" value="Cập nhật" class="edit-btn" />
