@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vn">
+  <head>
+    <!-- Chỉnh biểu tượng web -->
+    <link href="./icon/Logo.svg" rel="shortcut icon" />
+    <title>Luxe - Admin</title>
+    <!-- GG Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/khachhang.css" />
+    <!-- Scripts -->
+    <script src="js/index.js"></script>
+    <script src="js/khachhang.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
+    <!-- Page Title -->
+    <section id="page-title">
+      <div class="container">
+        <div class="home-title">
+          <img src="./icon/khachhang-settings.svg" alt="" />
+          <h1 class="title">Cập nhật khách hàng</h1>
+        </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content-2">
+      <form action="" class="edit-customer">
+        <!-- Row 1 -->
+        <div class="form-row">
+          <div class="form-group">
+            <div class="image">
+              <img class="ava" src="./img/khachhang-ava.png" alt="" />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group-in">
+              <label for="NgaySinh" class="form-label">Ngày sinh</label>
+              <input
+                type="date"
+                id="NgaySinh"
+                class="form-input"
+                onchange="ChooseNgaySinh()"
+              />
+            </div>
+            <div class="form-group-in">
+              <label for="Email" class="form-label">Email</label>
+              <input type="text" id="Email" class="form-input" />
+            </div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="TenKH" class="form-label">Tên khách hàng</label>
+            <input type="text" id="TenKH" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="Sdt" class="form-label">Số điện thoại</label>
+            <input type="text" id="Sdt" class="form-input" />
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="GioiTinh" class="form-label">Giới tính</label>
+            <!-- <input type="text" id="GioiTinh" class="form-input" /> -->
+            <select name="GioiTinh" id="GioiTinh" class="form-input">
+              <option value="1">Nữ</option>
+              <option value="2">Nam</option>
+              <option value="3">Khác</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Dc" class="form-label">Địa Chỉ</label>
+            <input type="text" id="Dc" class="form-input" />
+          </div>
+        </div>
+      </form>
+      <div class="edit-action">
+        <a href="./khachhang.html"
+          ><input type="submit" value="Cập nhật" class="edit-btn"
+        /></a>
+        <a href="./khachhang.html"
+          ><input type="submit" value="Huỷ" class="edit-btn"
+        /></a>
+      </div>
+    </section>
+  </body>
+</html>
