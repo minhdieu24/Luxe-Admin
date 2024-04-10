@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vn">
+<html lang="en">
   <head>
     <!-- Chỉnh biểu tượng web -->
     <link href="./icon/Logo.svg" rel="shortcut icon" />
@@ -12,18 +12,49 @@
       rel="stylesheet"
     />
     <!-- Styles -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/khachhang.css" />
+    <link rel="stylesheet" href="khachhang.css/reset.css" />
+    <link rel="stylesheet" href="khachhang.css/styles.css" />
     <!-- Scripts -->
-    <script src="js/index.js"></script>
-    <script src="js/khachhang.js"></script>
+    <script src="./khachhang.js/scripts.js"></script>
+    <!--Thư viên flatpickr để chọn ngày giờ-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
-    <header id="header"></header>
-    <script>
-      load("#header", "./template/header.html");
-    </script>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="top-bar">
+          <!-- Logo -->
+          <a href="./" class="logo-nav">
+            <img src="./icon/Logo.svg" alt="Luxe" />
+            <h1 class="logo-title">Luxe</h1>
+          </a>
+          <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
+          <!-- Navigation -->
+          <nav class="navbar">
+            <ul>
+              <li><a href="#!">Trang chủ</a></li>
+              <li><a href="#!">Sản phẩm</a></li>
+              <li><a href="#!">Khuyến mãi</a></li>
+              <li><a href="#!">Đơn hàng</a></li>
+              <li><a href="#!">Khách hàng</a></li>
+              <li><a href="#!">Nhân viên</a></li>
+              <li><a href="#!">Thống kê</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action -->
+          <div class="top-act">
+            <button class="top-act-btn">
+              <img src="./icon/user.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Page Title -->
     <section id="page-title">
       <div class="container">
@@ -40,17 +71,17 @@
         <div class="form-row">
           <div class="form-group">
             <div class="image">
-              <img class="ava" src="./img/khachhang-ava.png" alt="" />
+            <img class="ava" src="./img/khachhang-ava.png" alt=""/>
             </div>
           </div>
           <div class="form-group">
             <div class="form-group-in">
               <label for="NgaySinh" class="form-label">Ngày sinh</label>
               <input
-                type="date"
-                id="NgaySinh"
-                class="form-input"
-                onchange="ChooseNgaySinh()"
+              type="date"
+              name="date"
+              id="NgaySinhInput"
+              class="form-input"
               />
             </div>
             <div class="form-group-in">
@@ -62,9 +93,9 @@
         <!-- Row 2 -->
         <div class="form-row">
           <div class="form-group">
-            <label for="TenKH" class="form-label">Tên khách hàng</label>
-            <input type="text" id="TenKH" class="form-input" />
-          </div>
+          <label for="TenKH" class="form-label">Tên khách hàng</label>
+          <input type="text" id="TenKH" class="form-input" />
+        </div>
           <div class="form-group">
             <label for="Sdt" class="form-label">Số điện thoại</label>
             <input type="text" id="Sdt" class="form-input" />
@@ -88,12 +119,8 @@
         </div>
       </form>
       <div class="edit-action">
-        <a href="./khachhang.html"
-          ><input type="submit" value="Cập nhật" class="edit-btn"
-        /></a>
-        <a href="./khachhang.html"
-          ><input type="submit" value="Huỷ" class="edit-btn"
-        /></a>
+        <input type="submit" value="Cập nhật" class="edit-btn" />
+        <input type="submit" value="Huỷ" class="edit-btn" />
       </div>
     </section>
   </body>
