@@ -11,6 +11,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Quicksand, sans-serif;
+  background-color: #eee;
 }
 
 /* Common */
@@ -18,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-.container {
+.index_main {
   max-width: calc(100% - 100px);
   margin-left: auto;
   margin-right: auto;
@@ -30,7 +31,7 @@ header {
   background-color: #171c28;
   padding: 12.5px 0px;
 }
-/* ============= Navigation ============ */
+/* ============= HEADER ============ */
 .logo-nav {
   display: flex;
   align-items: center;
@@ -100,21 +101,50 @@ header {
   text-decoration: underline;
   color: #ffbe98;
 }
-#page-title-DMSP {
-}
-/* Home Title */
+/*============== Home Title ===============*/
 .home-title-DMSP {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-  padding: 10px 0;
+  justify-content: space-between;
+  padding: 16px 0;
+  /* margin: 0 170px; */
+  margin: 0 11%;
 }
 
 .home-title-DMSP .title {
-  margin-left: 10px;
+  margin-left: 18px;
   color: #f86624;
   font-size: 2.4rem;
   font-weight: 700;
+}
+.home-title-danhmuc-group {
+  display: flex;
+  align-items: center;
+}
+.home-title-edit-danhmuc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  margin: 0 30px;
+}
+
+.home-title-edit-danhmuc .title {
+  margin-left: 14px;
+  color: #f86624;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+/* ==========  trang "Cập nhật danh mục  ========= */
+.container-title-danhmuc {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  background-color: white;
+}
+.container-title-edit {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3%;
+  background-color: white;
 }
 
 /* ============= Thông tin danh mục ============ */
@@ -151,7 +181,7 @@ header {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 27px 40px;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -172,49 +202,64 @@ header {
   display: block;
 }
 .form-DMSP-label {
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: #1a162e;
   font-weight: 650;
 }
 
 .form-DMSP-input {
   font-size: 1.5rem;
-  height: 30px;
+  height: 33px;
   border: 1px solid #051023;
   border-radius: 5px;
   font-family: Quicksand;
   font-weight: 600;
   width: 235px;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 .button-them-moi {
   cursor: pointer;
   border: 0;
-  padding: 15px;
-  background-color: #ffb487eb;
+  padding: 5px 12px;
+  /* background-color: #ffb487eb; */
+  background-color: #ff9f65;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 550;
+  color: #fff;
+  font-weight: bold;
 }
 .button-them-moi:hover {
   background-color: #ffac7a;
 }
+.button-reset {
+  cursor: pointer;
+  border: 0;
+  padding: 8px 12px;
+  /* background-color: #ffb487eb; */
+  background-color: #ff9f65;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  font-family: Quicksand;
+}
 .file-procat {
+  display: block;
   font-weight: 500;
   font-size: 15px;
   font-family: quicksand;
 }
 
-/*======== filter Danh sách sản phẩm ========*/
+/*======== Search Danh sách sản phẩm ========*/
 .filter-dmsp--wrapper {
   display: flex;
 }
-.filterSP option {
-  background-color: gainsboro;
+.filter {
+  display: flex;
 }
 .filter-DMSP,
-.filter-input,
-.filter-DMSP-btn {
+.filter-input {
   padding: 10px;
   font-size: 1.6rem;
   border: 1px solid #a6a6a6;
@@ -222,9 +267,7 @@ header {
   font-family: Quicksand;
   font-weight: 600;
   font-size: 1.6rem;
-}
-.filter-DMSP-btn {
-  background-color: #ffb487eb;
+  width: 160px;
 }
 .filter-input {
   display: block;
@@ -234,13 +277,31 @@ header {
 .filter-DMSP {
   background-color: #404b4b;
   color: #fff;
+  text-align: center;
+  /* background-color: #ff9f65; */
+  border: none;
 }
-.filter-DMSP-btn {
-  width: 80px;
-  height: 48px;
-  object-fit: none;
+.search-DMSP-btn {
+  cursor: pointer;
+  /* background-color: #ff9f65; */
+  background-color: #404b4b;
+  color: #fff;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 0 15px;
+  border: none;
 }
-
+.error-message {
+  color: red;
+  font-weight: 600;
+  font-size: 16px;
+  margin: -10px 0;
+  text-align: center;
+}
+.search-DMSP-btn:hover {
+  opacity: 0.7;
+}
 /* ============ Bảng ================== */
 .product-list {
   background-color: #fff;
@@ -250,12 +311,11 @@ header {
 
 .product-list td > img {
   display: inline-block;
-  width: 70px;
-  /* background-color: #f6f6f6; */
+  width: 105px;
 }
 
 .product-list td > img:hover {
-  transform: scale(1.8);
+  transform: scale(1.4);
 }
 
 .product-list td img:hover {
@@ -269,10 +329,10 @@ header {
 }
 .product-list th {
   padding: 15px;
-  color: #000;
+  color: white;
   font-size: 1.8rem;
-  font-weight: 600;
-  background-color: #ffb487eb;
+  font-weight: 650;
+  background-color: #ff9f65;
 }
 
 .product-list td {
@@ -283,55 +343,35 @@ header {
   font-weight: 520;
   line-height: 1.3;
   max-width: 200px;
+  overflow: hidden;
 }
-/* ================= PAGINATION PHÍA DƯỚI CÁC SẢN PHẨM ==================== */
-.pagination--container,
-.pagination--container__button,
-.cate-admin__pagination--numbers,
-.link {
+.action {
   display: flex;
-  align-items: center;
+  gap: 15px;
   justify-content: center;
 }
-.cate-admin__pagination--numbers {
-  column-gap: 12px;
+/* ================= PAGINATION PHÍA DƯỚI CÁC SẢN PHẨM ==================== */
+.list-number {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
 }
-.cate-admin__pagination--numbers a {
-  font-size: 16px;
+.list-number a {
+  color: #fff;
+  font-size: 15px;
   font-weight: 600;
 }
-.pagination--container__button:hover,
-.link:hover {
-  color: #fff;
-  background: #f98542;
-}
-.link.active {
-  color: #fff;
-  background: #f98542;
-}
-/* ======== phần mũi tên ========= */
-.pagination--container {
-  column-gap: 12px;
-}
-.pagination--container__button {
+.list-number button {
   border: none;
-  background-color: var(--background-color-1);
-}
-.pagination--container__button i {
-  pointer-events: none;
-}
-.pagination--container__button:disabled {
-  color: #b3b3b3;
-  pointer-events: none;
-}
-.pagination--container__button,
-.link {
-  height: 38px;
-  width: 38px;
-  color: var(--text-color-2);
-  font-size: 18px;
+  background: #ff9f65;
   border-radius: 6px;
   cursor: pointer;
+  height: 38px;
+  width: 38px;
+}
+.list-number a.active {
+  color: #fff;
+  background: #ff9f65;
 }
 /* ================= EDIT DMSP========================= */
 /* ================================ */
@@ -359,23 +399,22 @@ header {
 .input-editDMSP-frame {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: column;
   padding: 50px 60px 34px 60px;
-  gap: 30px 60px;
-  width: 90%;
+  gap: 15px;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .input-editDMSP-frame {
   background-color: #fff;
 }
-/* ==== 2 ==== */
-.category-input-frame {
+/* ==== trang sửa sản phẩm 2 ==== */
+/* .category-input-frame {
   display: flex;
   justify-content: flex-start;
   max-width: 100%;
-}
+} */
 
 .category-input-frame {
   flex-direction: column;
@@ -383,17 +422,26 @@ header {
   box-sizing: border-box;
   gap: 50px 0;
 }
-.category-input-note {
-  display: flex;
-  gap: 20px;
+.form-group #HinhAnhDMSP {
+  margin-bottom: 2.3rem;
 }
-.input-DM-frame {
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px 20px;
-  max-width: 100%;
+.form-group #ten_danhmuc {
+  margin-bottom: 1.5rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 510;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .input-ten-dm {
   height: 50px;
@@ -418,8 +466,8 @@ header {
   font-weight: 600;
 }
 /* ================ thông tin cập nhật ============*/
-.cap-nhat-button {
-  width: 100px;
+.btn {
+  /* width: 100px;
   border-radius: 10px;
   background-color: #ef9059;
   justify-content: center;
@@ -430,67 +478,57 @@ header {
   cursor: pointer;
   font-weight: 700;
   border: none;
-  font-size: 15px;
-}
-
-.cp-nht-child {
-  height: 55px;
-  width: 161px;
-  position: relative;
-  border-radius: 10px;
-  background-color: #ef9059;
-  display: none;
-}
-
-.update-info-DMSP-frame {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* button */
-.alert-add-dmsp--text {
-  width: 421px;
-  position: relative;
-  font-size: 24px;
-  line-height: 22px;
-  font-weight: 700;
-  color: #1a162e;
-  text-align: center;
+  font-size: 15px; */
   display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
   background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.alert-add-dmsp--img {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  margin: 0 !important;
-  top: 21px;
-  left: 226px;
+.btn-update {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  margin-right: 10px;
 }
-.alert-add-dmsp {
-  position: relative;
-  border-radius: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 73px 40px 28px 39px;
-  box-sizing: border-box;
-  max-width: 90%;
-  max-height: 90%;
+.btn-update:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
-.popup-overlay {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  inset: 0px;
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
-.edit-dmsp {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: relative;
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+.btn-secondary:active {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+  box-shadow: 0 0 5px #4e555b;
+}
+.btn-update:active {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 5px #0062cc;
+}
+
+.form-group label {
+  display: inline-block;
+  margin-bottom: 10px;
 }

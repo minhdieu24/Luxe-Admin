@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Chỉnh biểu tượng web -->
+    <link href="./icon/Logo.svg" rel="shortcut icon" />
+    <title>Luxe - Admin</title>
+    <!-- GG Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/danhmuc.css" />
+    <link rel="stylesheet" href="css/responsinve.css" />
+    <!-- Scripts -->
+    <script src="./js/scripts.js"></script>
+    <!-- FONT AWESOME - THƯ VIỆN ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="edit-dmsp">
+      <!-- Header -->
+      <header>
+        <div class="index_main">
+          <div class="top-bar">
+            <!-- Logo -->
+            <a href="./" class="logo-nav">
+              <img src="./icon/Logo.svg" alt="Luxe" />
+              <h1 class="logo-title">Luxe</h1>
+            </a>
+            <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
+            <!-- Navigation -->
+            <nav class="navbar-index">
+              <ul>
+                <li><a href="index.php">Trang chủ</a></li>
+                <li><a href="sanpham.php">Sản phẩm</a></li>
+                <li><a href="#!">Khuyến mãi</a></li>
+                <li><a href="#!">Đơn hàng</a></li>
+                <li><a href="#!">Khách hàng</a></li>
+                <li><a href="#!">Nhân viên</a></li>
+                <li><a href="#!">Thống kê</a></li>
+              </ul>
+            </nav>
+
+            <!-- Action -->
+            <div class="top-act">
+              <button class="top-act-btn">
+                <img src="./icon/header-user.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page Title -->
+      <div class="container-title-edit">
+        <div class="home-title-edit-danhmuc">
+          <div style="display: flex; align-items: center">
+            <img src="./icon/sanpham-settings.svg" alt="" width="37px" />
+            <h1 class="title">CẬP NHẬT DANH MỤC SẢN PHẨM</h1>
+          </div>
+        </div>
+      </div>
+      <!-- Main content -->
+      <form
+        action="danhmuc.php?opt=update_dmsp"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <section id="main-cate-edit-content">
+          <div class="input-editDMSP-frame">
+            <!-- Mã danh mục  -->
+            <input type="hidden" name="ma_danhmuc" value="1" />
+
+            <!-- tên -->
+            <div class="form-group">
+              <label for="TenDMSP" class="form-DMSP-label"
+                >Tên danh mục <span style="color: red">*</span></label
+              >
+              <input
+                type="text"
+                name="ten_danhmuc"
+                class="form-control"
+                id="ten_danhmuc"
+                placeholder="Nhập tên danh mục"
+                required
+                value="Nhẫn"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="HinhAnhDMSP" class="form-DMSP-label">Hình ảnh </label>
+              <input
+                type="file"
+                id="HinhAnhDMSP"
+                name="hinhanh"
+                class="file-procat"
+                title="Hình ảnh"
+              />
+              <!-- Hiển thị hình ảnh hiện tại nếu có -->
+              <img src="./img/nhan.webp" alt="Hình ảnh" width="200px" />
+              <!-- Hiển thị tên hình ảnh -->
+              <p>nhan.webp</p>
+              <!-- Hiển thị tên hình ảnh -->
+
+              <input type="hidden" name="img_name" value="nhan.webp" />
+            </div>
+            <div class="edit-action">
+              <input
+                type="submit"
+                value="Cập nhật"
+                class="btn btn-update"
+                id="update-button"
+                onclick="return alert ('Cập nhật danh mục sản phẩm thành công!'); window.location.href = 'danhmuc.html'"
+                ;
+              />
+              <input
+                type="button"
+                value="Hủy"
+                class="btn btn-secondary"
+                onclick="window.location.href = 'danhmuc.html'"
+              />
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+  </body>
+</html>
