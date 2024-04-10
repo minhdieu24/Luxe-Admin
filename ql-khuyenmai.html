@@ -17,7 +17,10 @@
     <!-- Scripts -->
     <script src="./js/khuyenmai.js"></script>
     <!--Thư viên flatpickr để chọn ngày giờ-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -58,12 +61,14 @@
         <div class="home-title">
           <img src="./icon/sanpham-settings.svg" alt="" />
           <h1 class="title">Cập nhật danh sách coupon</h1>
-          <button type="button" onclick="resetForm()" class="add-new-button2">Làm mới</button>
+          <button type="button" onclick="resetForm()" class="add-new-button2">
+            Làm mới
+          </button>
           <!--Chức năng làm mới form-->
           <script>
-              function resetForm() {
-            document.querySelector('form').reset();
-              }
+            function resetForm() {
+              document.querySelector("form").reset();
+            }
           </script>
         </div>
       </div>
@@ -78,7 +83,7 @@
             <input type="text" id="MaCP" class="form-input" />
           </div>
         </div>
-        
+
         <!-- Row 2 -->
         <div class="form-row">
           <div class="form-group">
@@ -86,7 +91,9 @@
             <input type="text" id="GTGiam" class="form-input" />
           </div>
           <div class="form-group">
-            <label for="GTToiThieu" class="form-label">Giá trị đơn hàng tối thiểu</label>
+            <label for="GTToiThieu" class="form-label"
+              >Giá trị đơn hàng tối thiểu</label
+            >
             <input type="text" id="GTToiThieu" class="form-input" />
           </div>
         </div>
@@ -102,33 +109,44 @@
           </div>
           <div class="form-group">
             <label for="LuotSD" class="form-label">Lượt sử dụng</label>
-            <input type="text" id="LuotSD" class="form-input" />          
+            <input type="text" id="LuotSD" class="form-input" />
           </div>
         </div>
-          <!-- Row 4 -->
-          <div class="form-row">
-            <div class="form-group">
-                <label for="TGBatDau" class="form-label">Thời gian bắt đầu</label>
-                <input type="date" name="date" id="TGBatDauInput" class="form-input"/>
-            </div>
-            <div class="form-group">
-                <label for="TGKetThuc" class="form-label">Thời gian kết thúc</label>
-                <input type="date" name="date" id="TGKetThucInput" class="form-input"/>
- 
-            </div>
-            <!-- Chức năng chọn ngày giờ-->
-            <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js">
-              flatpickr('#date', {
-                enableTime: true,
-                dateFormat: "Y-m-d",
-                locale: "vi"
-              });
-            </script>
-        </div>        
+        <!-- Row 4 -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="TGBatDau" class="form-label">Thời gian bắt đầu</label>
+            <input
+              type="date"
+              name="date"
+              id="TGBatDauInput"
+              class="form-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="TGKetThuc" class="form-label">Thời gian kết thúc</label>
+            <input
+              type="date"
+              name="date"
+              id="TGKetThucInput"
+              class="form-input"
+            />
+          </div>
+          <!-- Chức năng chọn ngày giờ-->
+          <script
+            src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"
+          >
+            flatpickr('#date', {
+              enableTime: true,
+              dateFormat: "Y-m-d",
+              locale: "vi"
+            });
+          </script>
+        </div>
       </form>
       <div class="edit-action">
-        <button type="submit"  class="edit-btn" > Cập nhật </button>
-        <button type="submit" class="edit-btn" > Huỷ </button>
+        <button type="submit" class="edit-btn">Cập nhật</button>
+        <button type="submit" class="edit-btn">Huỷ</button>
       </div>
     </section>
   </body>

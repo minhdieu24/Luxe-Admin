@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Chỉnh biểu tượng web -->
-    <link href="icon/Logo.svg" rel="shortcut icon">
+    <link href="icon/Logo.svg" rel="shortcut icon" />
     <title>Luxe - Trang sức cao cấp</title>
     <!-- GG Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,109 +13,81 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/donhang.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- JS -->
+    <script src="./js/header.js"></script>
   </head>
   <body>
-    <header class="fixed-header" style="background: rgb(27, 26, 32)!important;">
-        <div class="container">
-          <div class="top-bar">
-            <!-- Mobile menu -->
-            <button class="hamburger-menu" onclick="burgerFunction()">
-              <img src="icon/burger.svg" alt="" />
-            </button>
-            <script src="./js/scripts.js"></script>
-            <!-- Logo -->
-            <a href="" class="logo-nav">
-              <img src="icon/Logo.svg" alt="Luxe" />
-              <h1 class="logo-title">Luxe</h1>
-            </a>
-            <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
-            <!-- Navigation -->
-            <nav class="navbar-admin">
-              <ul style="margin-left: 3rem !important;">
-                <li><a href="#!">Trang chủ</a></li>
-                <li><a href="#!">Sản phẩm
-                     <img src="icon/Dropdown.svg">
-                </a></li>           
-                <li><a href="#!">Khuyến mãi 
-                    <img src="icon/Dropdown.svg">
-                </a></li>
-                <li><a href="#!">Đơn hàng</a></li>
-                <li><a href="#!">Khách hàng</a></li>
-                <li><a href="#!">Nhân viên</a></li>
-                <li><a href="#!">Thống kê</a></li>
-              </ul>
-            </nav>
-    
-            <!-- Action -->
-            <div class="top-act">
-              <div class="top-act-group">
-                <button class="top-act-btn">
-                  <img src="./icon/search1.svg" alt="" />
-                </button>
-              </div>
-                <div class="top-act-separate"></div>
-                <button class="top-act-btn">
-                  <img src="./icon/user.svg" alt="" />
-                </button>
-            </div>
-          </div>
-        </div>
-      </header>
+    <!-- Header -->
+    <header id="header"></header>
+    <script>
+      load("#header", "./template/header.html");
+    </script>
     <div class="QL-wrap">
-        <div class = "QLDH">
-            <h1>Quản lý đơn hàng</h1>
-            <a href="" target="_self" class="btnSubmit"><b>+ Thêm mới</b></a>
-        </div>
+      <div class="QLDH">
+        <h1>Quản lý đơn hàng</h1>
+        <a href="" target="_self" class="btnSubmit"><b>+ Thêm mới</b></a>
+      </div>
     </div>
     <div class="QL-wrap1">
-        <div class="QL">
-            <div class="search">
-                <input type="text" placeholder="Tìm kiếm tại đây">
-                <img src="icon/Search.svg" alt="Tìm kiếm" /> 
-            </div>
-            <div class="bang">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Mã đơn</th>                      
-                            <th>Mã sản phẩm</th>
-                            <th>Số lượng</th>
-                            <th>Địa chỉ giao</th>
-                            <th>Tổng tiền</th>
-                            <th>Tình trạng</th>
-                            <th>Tác vụ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DH01</td>                      
-                            <td>Pro1</td>
-                            <td>2</td>
-                            <td>136 Lê Đình Cẩn, Q2, TPHCM</td>
-                            <td>1.400.000</td>
-                            <td>đã giao</td>
-                            <td>
-                                <a href="" target="_self"><img src="icon/update.svg" alt="" /></a>
-                                <a href="" target="_self"><img src="icon/Delete.svg" alt="" /></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>DH02</td>
-                            <td>Pro3</td>
-                            <td>1</td>
-                            <td>76 Tôn Đức Thắng, Q7, TPHCM</td>
-                            <td>2.000.000</td>
-                            <td>chưa giao</td>
-                            <td>
-                                <a href="" target="_self"><img src="icon/update.svg" alt="" /></a>
-                                <a href="" target="_self"><img src="icon/Delete.svg" alt="" /></a>
-                            </td>
-                        </tr>        
-                    </tbody>
-                </table>
-            </div>
+      <div class="QL">
+        <div class="search">
+          <input type="text" placeholder="Tìm kiếm tại đây" />
+          <img src="icon/Search.svg" alt="Tìm kiếm" />
         </div>
+        <div class="bang">
+          <table>
+            <thead>
+              <tr>
+                <th>Mã đơn</th>
+                <th>Mã sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Địa chỉ giao</th>
+                <th>Tổng tiền</th>
+                <th>Tình trạng</th>
+                <th>Tác vụ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>DH01</td>
+                <td>Pro1</td>
+                <td>2</td>
+                <td>136 Lê Đình Cẩn, Q2, TPHCM</td>
+                <td>1.400.000</td>
+                <td>đã giao</td>
+                <td>
+                  <a href="" target="_self"
+                    ><img src="icon/update.svg" alt=""
+                  /></a>
+                  <a href="" target="_self"
+                    ><img src="icon/Delete.svg" alt=""
+                  /></a>
+                </td>
+              </tr>
+              <tr>
+                <td>DH02</td>
+                <td>Pro3</td>
+                <td>1</td>
+                <td>76 Tôn Đức Thắng, Q7, TPHCM</td>
+                <td>2.000.000</td>
+                <td>chưa giao</td>
+                <td>
+                  <a href="" target="_self"
+                    ><img src="icon/update.svg" alt=""
+                  /></a>
+                  <a href="" target="_self"
+                    ><img src="icon/Delete.svg" alt=""
+                  /></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
+</html>
