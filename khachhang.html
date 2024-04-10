@@ -12,19 +12,44 @@
       rel="stylesheet"
     />
     <!-- Styles -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/khachhang.css" />
+    <link rel="stylesheet" href="khachhang.css/reset.css" />
+    <link rel="stylesheet" href="khachhang.css/styles.css" />
     <!-- Scripts -->
-    <script src="js/index.js"></script>
-    <script src="js/khachhang.js"></script>
+    <script src="./khachhang.js/scripts.js"></script>
   </head>
   <body>
     <!-- Header -->
-    <header id="header"></header>
-    <script>
-      load("#header", "./template/header.html");
-    </script>
+    <header>
+      <div class="container">
+        <div class="top-bar">
+          <!-- Logo -->
+          <a href="./" class="logo-nav">
+            <img src="./icon/Logo.svg" alt="Luxe" />
+            <h1 class="logo-title">Luxe</h1>
+          </a>
+          <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
+          <!-- Navigation -->
+          <nav class="navbar">
+            <ul>
+              <li><a href="#!">Trang chủ</a></li>
+              <li><a href="#!">Sản phẩm</a></li>
+              <li><a href="#!">Khuyến mãi</a></li>
+              <li><a href="#!">Đơn hàng</a></li>
+              <li><a href="#!">Khách hàng</a></li>
+              <li><a href="#!">Nhân viên</a></li>
+              <li><a href="#!">Thống kê</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action -->
+          <div class="top-act">
+            <button class="top-act-btn">
+              <img src="./icon/user.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Page Title -->
     <section id="page-title">
       <div class="container">
@@ -34,7 +59,7 @@
             <h1 class="title" style="white-space: nowrap;">Danh sách khách hàng</h1>
           </div>
           <div class="home-title">
-            <a href="./themkhachhang.html"><input type="submit" value="+Thêm" class="page-btn"/></a>
+            <button class="page-btn">Thêm mới</button>
           </div>
       </div>
     </section>
@@ -55,7 +80,8 @@
       <table class="customer-list">
         <thead>
           <tr>
-            <th>Mã khách hàng</th>
+            <th>STT</th>
+            <th>Mã KH</th>
             <th>Tên</th>
             <th>Giới tính</th>
             <th>Ngày sinh</th>
@@ -69,6 +95,7 @@
           <!-- KH01 -->
           <tr>
             <td>1</td>
+            <td>KH01</td>
             <td>Nguyễn Thùy Trang</td>
             <td>Nữ</td>
             <td>25/01/1989</td>
@@ -77,7 +104,7 @@
             <td>192 Phạm Đức Sơn, phường 16, quận 8, TPCHM</td>
             <td>
               <div class="action">
-                <a href="./suakhachhang.html"><img src="./icon/khachhang-edit.svg" alt="" /></a>
+                <img src="./icon/khachhang-edit.svg" alt="" />
                 <img src="./icon/khachhang-delete.svg" alt="" />
               </div>
             </td>
@@ -85,6 +112,7 @@
           <!-- KH02 -->
           <tr>
             <td>2</td>
+            <td>KH02</td>
             <td>Vũ Lệ Quyên</td>
             <td>Nữ</td>
             <td>02/04/1981</td>
@@ -93,7 +121,7 @@
             <td>132 Lý Thái Tổ, An Hòa, Thành phố Huế, Thừa Thiên Huế</td>
             <td>
               <div class="action">
-                <a href="./suakhachhang.html"><img src="./icon/khachhang-edit.svg" alt="" /></a>
+                <img src="./icon/khachhang-edit.svg" alt="" />
                 <img src="./icon/khachhang-delete.svg" alt="" />
               </div>
             </td>
@@ -101,6 +129,7 @@
           <!-- KH03 -->
           <tr>
             <td>3</td>
+            <td>KH03</td>
             <td>Quách Tapiau Maily</td>
             <td>Nữ</td>
             <td>24/06/1992</td>
@@ -109,7 +138,7 @@
             <td>57B P. Đinh Tiên Hoàng, Hàng Bạc, Hoàn Kiếm, Hà Nội</td>
             <td>
               <div class="action">
-                <a href="./suakhachhang.html"><img src="./icon/khachhang-edit.svg" alt="" /></a>
+                <img src="./icon/khachhang-edit.svg" alt="" />
                 <img src="./icon/khachhang-delete.svg" alt="" />
               </div>
             </td>
@@ -117,6 +146,7 @@
           <!-- KH04 -->
           <tr>
             <td>4</td>
+            <td>KH04</td>
             <td>Ninh Dương Lan Ngoc</td>
             <td>Nữ</td>
             <td>04/04/1990</td>
@@ -125,7 +155,7 @@
             <td>10 Đ. Mai Chí Thọ, Thủ Thiêm, Thủ Đức, Thành phố Hồ Chí Minh</td>
             <td>
               <div class="action">
-                <a href="./suakhachhang.html"><img src="./icon/khachhang-edit.svg" alt="" /></a>
+                <img src="./icon/khachhang-edit.svg" alt="" />
                 <img src="./icon/khachhang-delete.svg" alt="" />
               </div>
             </td>
@@ -133,6 +163,7 @@
           <!-- KH05 -->
           <tr>
             <td>5</td>
+            <td>KH05</td>
             <td>Ninh Dương Lan Ngoc</td>
             <td>Nữ</td>
             <td>04/04/1990</td>
@@ -141,7 +172,7 @@
             <td>10 Đ. Mai Chí Thọ, Thủ Thiêm, Thủ Đức, Thành phố Hồ Chí Minh</td>
             <td>
               <div class="action">
-                <a href="./suakhachhang.html"><img src="./icon/khachhang-edit.svg" alt="" /></a>
+                <img src="./icon/khachhang-edit.svg" alt="" />
                 <img src="./icon/khachhang-delete.svg" alt="" />
               </div>
             </td>
@@ -149,6 +180,7 @@
           <!-- KH06 -->
           <tr>
             <td>6</td>
+            <td>KH06</td>
             <td>Ninh Dương Lan Ngoc</td>
             <td>Nữ</td>
             <td>04/04/1990</td>
@@ -157,7 +189,7 @@
             <td>10 Đ. Mai Chí Thọ, Thủ Thiêm, Thủ Đức, Thành phố Hồ Chí Minh</td>
             <td>
               <div class="action">
-                <a href="./suakhachhang.html"><img src="./icon/khachhang-edit.svg" alt="" /></a>
+                <img src="./icon/khachhang-edit.svg" alt="" />
                 <img src="./icon/khachhang-delete.svg" alt="" />
               </div>
             </td>
