@@ -14,49 +14,97 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/danhmuc.css" />
-    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/responsinve.css" />
     <!-- Scripts -->
-    <script src="./js/header.js"></script>
-
+    <script src="./js/scripts.js"></script>
     <!-- FONT AWESOME - THƯ VIỆN ICON -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
+    <script>
+      //Reload trang hiện tại
+      function ReloadPage() {
+        // Đặt lại giá trị của trường input "data"
+        document.getElementById("ten_danhmuc").value = "";
+        document.getElementById("HinhAnhDMSP").value = "";
+        document.getElementById("filterDMSP").value = "-1"; // Reset lại giá trị của select box
+        document.getElementById("data").value = "";
+      }
+    </script>
   </head>
-
   <body>
     <!-- Header -->
-    <header id="header"></header>
-    <script>
-      load("#header", "./template/header.html");
-    </script>
-    <!-- Page Title -->
-    <section id="page-title-DMSP">
-      <div class="container">
-        <div class="home-title-DMSP">
-          <img src="./icon/diamond-2.svg" alt="" />
-          <h1 class="title">Quản lý loại sản phẩm</h1>
+    <header>
+      <div class="index_main">
+        <div class="top-bar">
+          <!-- Logo -->
+          <a href="./" class="logo-nav">
+            <img src="./icon/Logo.svg" alt="Luxe" />
+            <h1 class="logo-title">Luxe</h1>
+          </a>
+          <!-- nav = navigation giống div nhưng có ngữ nghĩa -->
+          <!-- Navigation -->
+          <nav class="navbar-index">
+            <ul>
+              <li><a href="index.php">Trang chủ</a></li>
+              <li><a href="sanpham.php">Sản phẩm</a></li>
+              <li><a href="#!">Khuyến mãi</a></li>
+              <li><a href="#!">Đơn hàng</a></li>
+              <li><a href="#!">Khách hàng</a></li>
+              <li><a href="#!">Nhân viên</a></li>
+              <li><a href="#!">Thống kê</a></li>
+            </ul>
+          </nav>
+          <!-- Action -->
+          <div class="top-act">
+            <button class="top-act-btn">
+              <img src="./icon/header-user.svg" alt="" />
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+    </header>
+    <!-- Page Title -->
+    <div class="container-title-danhmuc">
+      <div class="home-title-DMSP">
+        <div style="display: flex; align-items: center">
+          <div class="home-title-danhmuc-group">
+            <img src="./icon/sanpham-diamond.svg" alt="" width="37px" />
+            <h1 class="title">QUẢN LÝ DANH MỤC SẢN PHẨM</h1>
+          </div>
+        </div>
+        <input
+          type="reset"
+          value="Làm mới"
+          class="button-reset"
+          title="Làm mới"
+          onclick="ReloadPage()"
+          ;
+        />
+      </div>
+    </div>
     <!-- Main content -->
     <section id="main-cate-content">
       <div class="main-cate-content--wrapper">
-        <!----------- Thông tin danh mục ---------------->
+        <!----------- Thêm danh mục ---------------->
         <div class="info-cate">
           <div class="info-cate-name">Thông tin sản phẩm</div>
           <div class="info-cate-add">
-            <form action="">
+            <form
+              action="?opt=add_dmsp"
+              method="post"
+              enctype="multipart/form-data"
+            >
               <div class="info-cate-add__inner">
                 <div class="info-cate-add__inner--ten-input">
-                  <label for="TenDMSP" class="form-DMSP-label"
+                  <label for="ten_danhmuc" class="form-DMSP-label"
                     >Tên danh mục <span style="color: red">*</span></label
                   >
                   <input
                     type="text"
-                    id="TenDMSP"
-                    name="TenDMSP"
+                    id="ten_danhmuc"
+                    name="ten_danhmuc"
                     placeholder="Điền tên danh mục"
                     class="form-DMSP-input"
                     required
@@ -69,148 +117,140 @@
                   <input
                     type="file"
                     id="HinhAnhDMSP"
-                    name="HinhAnhDMSP"
+                    name="hinhanh"
                     class="file-procat"
                     required
                   />
                 </div>
-                <input type="submit" value="Thêm mới" class="button-them-moi" />
-                <!-- <button class="button-them-moi">
-              <div class="them-moi">Thêm mới</div>
-            </button> -->
+                <input
+                  type="submit"
+                  value="+"
+                  class="button-them-moi"
+                  title="Thêm sản phẩm"
+                  ;
+                />
               </div>
             </form>
           </div>
         </div>
-        <!----------- Filter ---------------->
-        <div class="filter-dmsp--wrapper">
-          <select name="filterDMSP" id="filterDMSP" class="filter-DMSP">
-            <option value="0">--Chọn điều kiện lọc--</option>
-            <option value="1">Mã danh mục</option>
-            <option value="2">Tên danh mục</option>
+        <!----------- Search ---------------->
+        <form action=" ?opt=search_dmsp" method="POST" class="filter">
+          <select name="dieukien" id="filterDMSP" class="filter-DMSP">
+            <option value="-1">-- Tìm kiếm --</option>
+            <option value="0">Mã danh mục</option>
+            <option value="1">Tên danh mục</option>
           </select>
-          <input type="text" id="data" class="filter-input" />
           <input
-            type="image"
-            src="./icon/search.svg"
-            alt=""
-            class="filter-DMSP-btn"
+            type="text"
+            name="giatri"
+            id="data"
+            class="filter-input"
+            placeholder="Tìm kiếm theo mã hoặc tên danh mục. VD: 1,2,..Nhẫn, Vòng tay,..."
+            value=""
+            ;
           />
-        </div>
-        <!-- Table -->
+          <button
+            type="button"
+            class="search-DMSP-btn"
+            onclick="window.location.href = 'danhmuc.html'"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
         <table class="product-list">
           <thead>
             <tr>
-              <th>Mã danh mục</th>
+              <th onclick='delete_san_pham("abc")'>Mã danh mục</th>
               <th>Tên danh mục</th>
               <th>Hình ảnh</th>
               <th>Tác vụ</th>
             </tr>
           </thead>
           <tbody>
-            <!-- SP1 -->
             <tr>
               <td>1</td>
-              <td>NHẪN</td>
-              <td><img src="./img/item-1.png" alt="" /></td>
+              <td>Nhẫn</td>
+              <td><img src="./img/nhan.webp" /></td>
               <td>
                 <div class="action">
-                  <img src="./icon/edit.svg" alt="" id="edit_button" />
-                  <img src="./icon/delete.svg" alt="" />
+                  <a href="sua_dmsp.html"
+                    ><img src="./icon/sanpham-edit.svg" alt="Sửa" /></a
+                  ><a
+                    href="?opt=del_dmsp&id=1"
+                    onclick="if(confirm('Bạn có chắc chắn muốn xoá danh mục sản phẩm - Nhẫn?')){ alert('Xóa danh mục sản phẩm thành công!'); } else { return false; }"
+                  >
+                    <img src="./icon/sanpham-delete.svg" alt="Xóa"
+                  /></a>
                 </div>
               </td>
             </tr>
-            <!-- SP2 -->
             <tr>
               <td>2</td>
-              <td>VÒNG TAY</td>
-              <td><img src="./img/item-1.png" alt="" /></td>
+              <td>Vòng tay</td>
+              <td><img src="./img/lac-tay.webp" /></td>
               <td>
                 <div class="action">
-                  <img src="./icon/edit.svg" alt="" />
-                  <img src="./icon/delete.svg" alt="" />
+                  <a href="sua_dmsp.htmls"
+                    ><img src="./icon/sanpham-edit.svg" alt="Sửa" /></a
+                  ><a
+                    href="?opt=del_dmsp&id=2"
+                    onclick="if(confirm('Bạn có chắc chắn muốn xoá danh mục sản phẩm - Vòng tay?')){ alert('Xóa danh mục sản phẩm thành công!'); } else { return false; }"
+                  >
+                    <img src="./icon/sanpham-delete.svg" alt="Xóa"
+                  /></a>
                 </div>
               </td>
             </tr>
-            <!-- SP3 -->
+
             <tr>
               <td>3</td>
-              <td>DÂY CHUYỀN</td>
-              <td><img src="./img/item-1.png" alt="" /></td>
+              <td>Dây chuyền</td>
+              <td><img src="./img/day-chuyen.webp" /></td>
               <td>
                 <div class="action">
-                  <img src="./icon/edit.svg" alt="" />
-                  <img src="./icon/delete.svg" alt="" />
+                  <a href="sua_dmsp.htmls"
+                    ><img src="./icon/sanpham-edit.svg" alt="Sửa" /></a
+                  ><a
+                    href="?opt=del_dmsp&id=3"
+                    onclick="if(confirm('Bạn có chắc chắn muốn xoá danh mục sản phẩm - Dây chuyền?')){ alert('Xóa danh mục sản phẩm thành công!'); } else { return false; }"
+                  >
+                    <img src="./icon/sanpham-delete.svg" alt="Xóa"
+                  /></a>
                 </div>
               </td>
             </tr>
-            <!-- SP4 -->
+
             <tr>
               <td>4</td>
-              <td>BÔNG TAI</td>
-              <td><img src="./img/item-1.png" alt="" /></td>
+              <td>Bông tai</td>
+              <td><img src="./img/bong-tai.jpg" /></td>
               <td>
                 <div class="action">
-                  <img src="./icon/edit.svg" alt="" />
-                  <img src="./icon/delete.svg" alt="" />
+                  <a href="sua_dmsp.htmls"
+                    ><img src="./icon/sanpham-edit.svg" alt="Sửa" /></a
+                  ><a
+                    href="?opt=del_dmsp&id=4"
+                    onclick="if(confirm('Bạn có chắc chắn muốn xoá danh mục sản phẩm - Bông tai?')){ alert('Xóa danh mục sản phẩm thành công!'); } else { return false; }"
+                  >
+                    <img src="./icon/sanpham-delete.svg" alt="Xóa"
+                  /></a>
                 </div>
               </td>
             </tr>
+            <!-- Các hàng dữ liệu khác -->
           </tbody>
         </table>
-
-        <!-- List -->
-        <div class="cate-admin__pagination">
-          <div class="pagination--container">
-            <!-- --------- Mũi tên "<<" ------------>
-            <button
-              class="pagination--container__button"
-              id="pagination_startBtn"
-              disabled
-            >
-              <i class="fa-solid fa-angles-left"></i>
-            </button>
-            <!-- --------- Mũi tên "<" ------------>
-            <button
-              class="pagination--container__button prevNext"
-              id="pagination_prev"
-              disabled
-            >
-              <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <!-- ---------Các số trang------------>
-            <div class="cate-admin__pagination--numbers">
-              <a href="#" class="link active">1</a>
-              <a href="#" class="link">2</a>
-              <a href="#" class="link">3</a>
-              <a href="#" class="link">4</a>
-              <!-- <a href="#" class="link">5</a> -->
-            </div>
-            <!-- --------- Mũi tên ">" ------------>
-            <button
-              class="pagination--container__button prevNext"
-              id="pagination_next"
-            >
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-            <!-- --------- Mũi tên ">>" ------------>
-            <button
-              class="pagination--container__button"
-              id="pagination_endBtn"
-            >
-              <i class="fa-solid fa-angles-right"></i>
-            </button>
-          </div>
+        <!-- Phân trang -->
+        <div class="list-number">
+          <button>
+            <a href="./danhmuc.php?trang=1">&lt &lt</a>
+          </button>
+          <button><a href="./danhmuc.php?trang=1">1</a></button>
+          <button>
+            <a href="./danhmuc.php?trang=1">&gt &gt</a>
+          </button>
         </div>
       </div>
     </section>
-    <script>
-      var edit_button = document.getElementById("edit_button");
-      if (edit_button) {
-        edit_button.addEventListener("click", function (e) {
-          window.location.href = "edit-dmsp.php"; //nhấn nút back quay lại qly loại sp
-        });
-      }
-    </script>
   </body>
 </html>
