@@ -173,7 +173,7 @@
     padding: 15px 35px;
     font: 600 18px/1.67 Quicksand, sans-serif;
     cursor: pointer;
-    margin-left: 950px;
+    margin-left: 65%;
   }
   .home-title .add-new-button2 {
     display: flex;
@@ -186,7 +186,7 @@
     padding: 15px 35px;
     font: 600 18px/1.67 Quicksand, sans-serif;
     cursor: pointer;
-    margin-left: 850px;
+    margin-left: 60%;
   }
   /* Danh sách coupon - Table */
   .filter-cp {
