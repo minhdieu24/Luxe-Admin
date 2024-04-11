@@ -55,6 +55,7 @@ a {
   font-family: Quicksand;
   font-size: 1.8rem;
   font-weight: 600;
+  cursor: pointer;
 }
 /* Main Content Home*/
 #main-content {
@@ -183,6 +184,7 @@ a {
 
 .action {
   margin-top: 8px;
+  cursor: pointer;
 }
 
 /* List number */
@@ -288,6 +290,7 @@ a {
   font-family: Quicksand;
   font-size: 1.8rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .file-pro {
