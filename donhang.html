@@ -26,29 +26,33 @@
     <script>
       load("#header", "./template/header.html");
     </script>
-    <div class="QL-wrap">
+   <!--   <div class="QL-wrap">
       <div class="QLDH">
         <h1>Quản lý đơn hàng</h1>
-        <a href="" target="_self" class="btnSubmit"><b>+ Thêm mới</b></a>
+        <a href="" target="_self" class="btnSubmit">+ Thêm mới</a>
       </div>
     </div>
     <div class="QL-wrap1">
       <div class="QL">
         <div class="search">
           <input type="text" placeholder="Tìm kiếm tại đây" />
-          <img src="icon/khuyenmai-search.svg" alt="Tìm kiếm" />
+          <img src="icon/khachhang-search.svg" alt="Tìm kiếm" />
         </div>
         <div class="bang">
           <table>
             <thead>
               <tr>
                 <th>Mã đơn</th>
-                <th>Mã sản phẩm</th>
-                <th>Số lượng</th>
+                <th>Ngày tạo</th>
                 <th>Địa chỉ giao</th>
                 <th>Tổng tiền</th>
+                <th>Giảm giá</th>
+                <th>Tổng thanh toán</th>
+                <th>Phương thức thanh toán</th>
                 <th>Tình trạng</th>
-                <th>Tác vụ</th>
+                <th>Ghi chú</th>
+                <th>Mã khách hàng</th>
+                <th>Mã Coupon</th>
               </tr>
             </thead>
             <tbody>
@@ -59,14 +63,14 @@
                 <td>136 Lê Đình Cẩn, Q2, TPHCM</td>
                 <td>1.400.000</td>
                 <td>đã giao</td>
-                <td>
+                 <td>
                   <a href="" target="_self"
-                    ><img src="icon/khachhang-edit.svg" alt=""
+                    ><img src="icon/update.svg" alt=""
                   /></a>
                   <a href="" target="_self"
-                    ><img src="icon/khachhang-delete.svg" alt=""
+                    ><img src="icon/Delete.svg" alt=""
                   /></a>
-                </td>
+                </td> 
               </tr>
               <tr>
                 <td>DH02</td>
@@ -75,19 +79,88 @@
                 <td>76 Tôn Đức Thắng, Q7, TPHCM</td>
                 <td>2.000.000</td>
                 <td>chưa giao</td>
-                <td>
+               <td>
                   <a href="" target="_self"
-                    ><img src="icon/khuyenmai-edit.svg" alt=""
+                    ><img src="icon/update.svg" alt=""
                   /></a>
                   <a href="" target="_self"
-                    ><img src="icon/khachhang-delete.svg" alt=""
+                    ><img src="icon/Delete.svg" alt=""
                   /></a>
-                </td>
+                </td> 
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-    </div>
+    </div> -->
+     <!-- Page Title -->
+     <section id="page-title">
+      <div class="container">
+        <div class="home-title">
+          <h1 class="title">Quản lý đơn hàng</h1>
+          <button class="add-new-button">+ Thêm mới</button>
+        </div>
+      </div>
+    </section>
+    <!-- Main content -->
+    <section id="main-content">
+      <!-- Filter -->
+      <div class="filter-cp">
+        <select name="filterCP" id="filterCP" class="filter">
+          <option value="0">--Chọn điều kiện lọc--</option>
+          <option value="1">Mã đơn hàng</option>
+          <option value="2">Tình trạng</option>
+        </select>
+        <input type="text" id="data" class="filter-input" />
+        <input type="image" src="./icon/khuyenmai-search.svg" alt="" class="filter-btn" />
+      </div>
+      <!-- Table -->
+      <table class="DH-list">
+        <thead>
+          <tr>
+                <th>Mã đơn</th>
+                <th>Ngày tạo</th>
+                <th>Địa chỉ giao</th>
+                <th>Tổng tiền</th>
+                <th>Giảm giá</th>
+                <th>Tổng thanh toán</th>
+                <th>Phương thức thanh toán</th>
+                <th>Tình trạng</th>
+                <th>Ghi chú</th>
+                <th>Mã khách hàng</th>
+                <th>Mã Coupon</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- DH1 -->
+          <tr>
+            <td>DH01</td>
+            <td>Pro1</td>
+            <td>2</td>
+            <td>136 Lê Đình Cẩn, Q2, TPHCM</td>
+            <td>1.400.000</td>
+            <td>đã giao</td>
+          </tr>
+           <!-- DH2 -->
+          <tr>
+            <td>DH02</td>
+            <td>Pro3</td>
+            <td>1</td>
+            <td>76 Tôn Đức Thắng, Q7, TPHCM</td>
+            <td>2.000.000</td>
+            <td>chưa giao</td>
+          </tr>
+        
+        </tbody>
+      </table>
+      <!-- List -->
+      <div class="list-number">
+        <button>&lt &lt</button>
+        <button>1</button>
+        <button>2</button>
+        <button>...</button>
+        <button>&gt &gt</button>
+      </div>
+    </section>
   </body>
 </html>
