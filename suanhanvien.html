@@ -15,28 +15,20 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/nhanvien.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- Styles + JS cho phần variants -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/header.css" />
     <!-- Scripts -->
-    <script src="./js/index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="./js/header.js"></script>
+    <!-- Styles + JS cho phần variants -->
     <script>
-      $(function() {
+      $(function () {
         // Khởi tạo Datepicker cho input có id là "NgayTG"
         $("#NgayTG").datepicker();
       });
       function generateEmail() {
-            var hoten = document.getElementById('Hoten').value;
-            var email = hoten.toLowerCase().replace(/\s+/g, '.') + '@luxe.com';
-            document.getElementById('Email').value = email;
-            document.getElementById('displayEmail').textContent = email; // Hiển thị địa chỉ email
+        var hoten = document.getElementById("Hoten").value;
+        var email = hoten.toLowerCase().replace(/\s+/g, ".") + "@luxe.com";
+        document.getElementById("Email").value = email;
+        document.getElementById("displayEmail").textContent = email; // Hiển thị địa chỉ email
       }
     </script>
   </head>
@@ -52,7 +44,13 @@
         <div class="home-title">
           <img src="./icon/suanhanvien-settings.svg" alt="" />
           <h1 class="title">Cập nhật danh sách nhân viên</h1>
-          <a class="add-new-button2" href="nhanvien.html" id="Return" target="_blank">Quay lại</a> 
+          <a
+            class="add-new-button2"
+            href="nhanvien.html"
+            id="Return"
+            target="_blank"
+            >Quay lại</a
+          >
         </div>
       </div>
     </section>
@@ -63,7 +61,12 @@
         <div class="form-row">
           <div class="form-group">
             <label for="Hoten" class="form-label">Họ tên nhân viên</label>
-            <input type="text" id="Hoten" class="form-input" oninput="generateEmail()"/>
+            <input
+              type="text"
+              id="Hoten"
+              class="form-input"
+              oninput="generateEmail()"
+            />
           </div>
           <div class="form-group">
             <label for="SDT" class="form-label">Số điện thoại</label>
@@ -88,15 +91,15 @@
         <div class="form-row">
           <div class="form-group">
             <label for="Email" class="form-label">Email</label>
-            <input type="email" id="Email" class="form-input" disabled/>
-            <p id="displayEmail"></p> <!-- Thêm phần tử HTML để hiển thị địa chỉ email -->
+            <input type="email" id="Email" class="form-input" disabled />
+            <p id="displayEmail"></p>
+            <!-- Thêm phần tử HTML để hiển thị địa chỉ email -->
           </div>
           <div class="form-group">
             <label for="NgayTG" class="form-label">Ngày tham gia</label>
-            <input type="text" id="NgayTG" class="form-input" />          
+            <input type="text" id="NgayTG" class="form-input" />
           </div>
         </div>
-        
       </form>
       <div class="edit-action">
         <input type="submit" value="Cập nhật" class="edit-btn" />
