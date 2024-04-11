@@ -29,7 +29,7 @@ a {
   .home-title {
     display: flex;
     align-items: center;
-    padding: 9px 0;
+    padding: 7px 0;
     text-align: center;
   }
   
@@ -93,7 +93,7 @@ a {
     background-color: #ffbe98;
     color: #000;
     text-align: center;
-    padding: 15px 35px;
+    padding: 10px 30px;
     font: 600 18px/1.67 Quicksand, sans-serif;
     cursor: pointer;
     margin-left: 65%;
@@ -106,10 +106,10 @@ a {
     background-color: #ffbe98;
     color: #000;
     text-align: center;
-    padding: 15px 35px;
+    padding: 10px 30px;
     font: 600 18px/1.67 Quicksand, sans-serif;
     cursor: pointer;
-    margin-left: 55%;
+    margin-left: 57%;
   }
   /* Danh sách coupon - Table */
   .filter-cp {
