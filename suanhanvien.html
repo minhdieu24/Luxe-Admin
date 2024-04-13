@@ -18,18 +18,6 @@
     <!-- Scripts -->
     <script src="./js/header.js"></script>
     <!-- Styles + JS cho phần variants -->
-    <script>
-      $(function () {
-        // Khởi tạo Datepicker cho input có id là "NgayTG"
-        $("#NgayTG").datepicker();
-      });
-      function generateEmail() {
-        var hoten = document.getElementById("Hoten").value;
-        var email = hoten.toLowerCase().replace(/\s+/g, ".") + "@luxe.com";
-        document.getElementById("Email").value = email;
-        document.getElementById("displayEmail").textContent = email; // Hiển thị địa chỉ email
-      }
-    </script>
   </head>
   <body>
     <!-- Header -->
@@ -62,7 +50,7 @@
               type="text"
               id="Hoten"
               class="form-input"
-              oninput="generateEmail()"
+              
             />
           </div>
           <div class="form-group">
@@ -88,9 +76,8 @@
         <div class="form-row">
           <div class="form-group">
             <label for="Email" class="form-label">Email</label>
-            <input type="email" id="Email" class="form-input" disabled />
-            <p id="displayEmail"></p>
-            <!-- Thêm phần tử HTML để hiển thị địa chỉ email -->
+            <input type="email" id="Email" class="form-input" />
+            
           </div>
           <div class="form-group">
             <label for="NgayTG" class="form-label">Ngày tham gia</label>
